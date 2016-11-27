@@ -1,19 +1,21 @@
 'use strict';
-import React, { Component } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
-import { Router, Route, Link, IndexRoute, hashHistory, browserHistory } from 'react-router'
+import { Router, Route, IndexRoute, hashHistory, browserHistory } from 'react-router'
+
+// Route-specific views:
+import Home from './components/Home';
+import About from './components/About';
+import Focus from './components/Focus';
+import Contact from './components/Contact';
+import Error404 from './components/Error404';
+
+// Route-invariant site layout views:
+import NavBar from './components/NavBar';
+import MainLayout from './components/MainLayout';
+
 
 // Top-level React (pure functional) component:
-import Home from './Home';
-import About from './About';
-import Focus from './Focus';
-import Contact from './Contact';
-import Error404 from './Error404';
-
-import NavBar from './NavBar';
-import MainLayout from './MainLayout';
-
-
 const App = () => (
   <Router history={ hashHistory }>
     <Route path='/' component={ MainLayout }>
@@ -27,50 +29,3 @@ const App = () => (
 );
 
 export default App;
-
-
-const NotFound = () => (
-  <h1>404.. This page is not found!</h1>
-);
-
-
-
-
-
-// class App extends Component {
-  
-//   render() {
-//     return (
-//       <div>
-//         <NavBar />
-//       </div>
-//     );
-//   }
-// };
-
-// export default App;
-
-
-
-// Inject into #app HTML element:
-// ReactDOM.render(<App />, document.getElementById('app'));
-
-// render((
-//   <Router history={ hashHistory }>
-//     <Route path="/" component={ App } />
-//   </Router>
-// ))
-
-
-// insert into index.js
-// import About from './modules/About'
-// import Repos from './modules/Repos'
-
-// render((
-//   <Router history={hashHistory}>
-//     <Route path="/" component={App}/>
-//     {/* add the routes here */}
-//     <Route path="/repos" component={Repos}/>
-//     <Route path="/about" component={About}/>
-//   </Router>
-// ), document.getElementById('app'))
