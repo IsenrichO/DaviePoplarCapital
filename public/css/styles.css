@@ -1,15 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 14px;
+}
 body {
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
   margin: 0;
   padding: 0;
-  background: #FFF url(../images/Site_bg.jpeg) no-repeat top center / cover;
-  background-attachment: fixed;
+  background: #FFF url(../images/Site_bg.jpeg) no-repeat fixed top center / cover;
+  overflow: hidden;
 }
+
+a,
+a:visited,
+a:focus,
+a:active { text-decoration: none; }
+
 #nav-links-wrapper {
   position: fixed;
   /*display: none;*/
   width: 0;
-  height: 100%;
+  height: 100vh;
   top: 0;
   left: 0;
   background: rgba(79, 152, 201, 0.80);
@@ -17,6 +31,7 @@ body {
   vertical-align: middle;
   font: 200 28px/20px Open Sans, sans-serif;
   z-index: 1000;
+  overflow: hidden;
 }
   #nav-links-wrapper.active {
     -webkit-animation: sideExpand 0.35s ease-out forwards;
@@ -45,13 +60,13 @@ body {
   top: 2%;
   color: rgb(79, 152, 201);
   font: 40px/40px Open Sans, sans-serif;
-  z-index: 1100;
   cursor: pointer;
   -webkit-transition: transform 0.35s ease-out;
   -moz-transition:    transform 0.35s ease-out;
   -ms-transition:     transform 0.35s ease-out;
   -o-transition:      transform 0.35s ease-out;
   transition:         transform 0.35s ease-out;
+  z-index: 1100;
 }
 #inter-pageNavBar {
   display: block;
@@ -66,32 +81,24 @@ body {
     position: relative; 
     display: block;
     width: 100%;
-    left: 0;
-    margin: auto;
-    padding: 25px 0;
-    text-align: left;
-    color: White;
-    line-height: 20px;
-    text-decoration: none;
+    padding: 1.7857142857142858rem 0;
+    color: #FFF;
     font-variant: small-caps;
+    text-indent: 1.5rem;
     -webkit-transition: padding-left 0.35s 0.1s ease-out;
     -moz-transition:    padding-left 0.35s 0.1s ease-out;
     -ms-transition:     padding-left 0.35s 0.1s ease-out;
     -o-transition:      padding-left 0.35s 0.1s ease-out;
     transition:         padding-left 0.35s 0.1s ease-out;
+    box-sizing: content-box;
   }
-    #inter-pageNavBar > a:hover {
-      padding-left: 10%;
-    }
+    #inter-pageNavBar > a:hover { padding-left: 10%; }
     #inter-pageNavBar > a:hover {
       text-shadow: 0 0 5px White;
       background: White;
       color: rgb(79, 152, 201);
     }
 
-a:visited, a:focus, a:active {
-  text-decoration: none;
-}
 #nav_Logo {
   display: block;
   position: relative;
@@ -145,7 +152,7 @@ a:visited, a:focus, a:active {
     height: 100%;
     margin: auto;
     padding: 0;
-    background: White;
+    background: #FFF;
   }
     #centerFill > div p {
       position: relative;
@@ -155,7 +162,8 @@ a:visited, a:focus, a:active {
       padding-left: 0;
       vertical-align: top;
       color: #626262;
-      font: 14px/24px Open Sans, sans-serif;
+      font: 1rem/24px 'Open Sans', sans-serif;
+      text-indent: 15%;
       text-align: left;
     }
     #centerFill > div > .third {
@@ -171,38 +179,37 @@ a:visited, a:focus, a:active {
       width: 40%;
       margin: 25px auto 5px 5%;
     }
-      #centerFill > div > div.contact_Info p {
-        width: 100%;
-      }
+      #centerFill > div > div.contact_Info p { width: 100%; }
 
     #centerFill > div div.contact_Btns {
       margin: 10px auto 5% 0;
       text-align: left;
     }
-      #centerFill > div div.contact_Btns a {
-        display: inline-block;
-        width: auto;
-        height: 20px;
-        vertical-align: middle;
-        text-decoration: none;        
-        padding: 12.5px 15px;
+      .primary-btn {
+        display: block;
+        width: 70%;
+        margin: 1rem auto;
+        padding: 12.5px 0;
         background: rgb(79, 152, 201);
-        font: 14px/20px Trebuchet MS, sans-serif; 
-        color: White; 
+        font: 1rem/20px 'Trebuchet MS', sans-serif; 
+        color: #FFF; 
         white-space: nowrap;
         box-shadow: 1px 1px 5px 0.5px Grey;
-        -webkit-transition: background 0.35s ease-out, color 0.35s ease-out;
-        -moz-transition:    background 0.35s ease-out, color 0.35s ease-out;
-        -ms-transition:     background 0.35s ease-out, color 0.35s ease-out;
-        -o-transition:      background 0.35s ease-out, color 0.35s ease-out;
-        transition:         background 0.35s ease-out, color 0.35s ease-out;
+        -webkit-transition: background 0.35s ease-out,
+                            color 0.35s ease-out;
+        -moz-transition:    background 0.35s ease-out,
+                            color 0.35s ease-out;
+        -ms-transition:     background 0.35s ease-out,
+                            color 0.35s ease-out;
+        -o-transition:      background 0.35s ease-out,
+                            color 0.35s ease-out;
+        transition:         background 0.35s ease-out,
+                            color 0.35s ease-out;
       }
-        #centerFill > div div.contact_Btns a:last-child {
-          margin: auto;
-        }
-        #centerFill > div div.contact_Btns a:hover {
+        #centerFill > div div.contact_Btns a:last-child { margin: auto; }
+        .primary-btn:hover {
           box-shadow: 1px 1px 5px 0.5px Grey;
-          background: White;
+          background: #FFF;
           color: rgb(79, 152, 201);
         }
 
@@ -210,8 +217,8 @@ a:visited, a:focus, a:active {
         width: 90%;
         text-align: center;
         display: block;
-        color: White;
-        font: 20px/20px Trebuchet MS, Wire One, sans-serif;
+        color: #FFF;
+        font: 20px/20px 'Trebuchet MS', 'Wire One', sans-serif;
         padding: 15px 0;
         margin: 20px auto;
         box-shadow: 1px 1px 5px 0.5px Grey;
@@ -227,7 +234,7 @@ a:visited, a:focus, a:active {
         word-wrap: break-word;
       }
         #centerFill > div > div > ul > li {
-          font: 14px/24px Open Sans, sans-serif;
+          font: 1rem/24px 'Open Sans', sans-serif;
           color: #626262;
           margin: 10px 10px 10px 0;
         }
@@ -235,8 +242,8 @@ a:visited, a:focus, a:active {
   #centerFill > p {
     display: block;
     color: #626262;
-    font: 14px/14px Open Sans, sans-serif;
-    background: White;
+    font: 1rem/1 'Open Sans', sans-serif;
+    background: #FFF;
     margin: 0;
     text-align: justify;
   }
@@ -274,12 +281,10 @@ a:visited, a:focus, a:active {
     position: relative;
     width: 100%;
     text-align: center;
-    font: 12px/14px Open Sans, sans-serif;
-    color: White;
+    font: 12px/1 Open Sans, sans-serif;
+    color: #FFF;
   }
-  #toolTip span:first-child {
-    margin-top: 3px;
-  }
+  #toolTip span:first-child { margin-top: 3px; }
   #centerFill #linkedIn_Cont,
   #centerFill #email_Cont {
     position: relative; 
@@ -306,9 +311,7 @@ a:visited, a:focus, a:active {
       -o-transition:      box-shadow 0.35s ease-out;
       transition:         box-shadow 0.35s ease;
     }
-    #centerFill #email_Cont > img {
-      height: 22px;
-    } 
+    #centerFill #email_Cont > img { height: 22px; } 
       #centerFill #linkedIn_Cont > img:hover,
       #centerFill #email_Cont > img:hover {
         box-shadow: 0 0 3px 1px Silver;
@@ -320,17 +323,16 @@ a:visited, a:focus, a:active {
 footer {
   position: absolute;
   display: block;
-  top: 143%;
+  width: 100vw;
+  height: 7vh;
   left: 0;
-  width: 100%;
-  height: 7%;
+  bottom: 0;
   background: #202020;
   z-index: 1005;
 }
   footer p {
-    display: inline-block;
     color: #626262;
-    font: 14px/1.5 Trebuchet MS, sans-serif;
+    font: 1.25rem/1.5 'Trebuchet MS', sans-serif;
     text-align: center;
   }
   footer > div {
@@ -382,9 +384,28 @@ footer {
         transform:         translateX(-50%);
       }
       footer .footer_SocialShare svg:hover,
-      footer #footer_emailGlyph:hover {
-        border: 1px solid Black;
-      }
-      footer .footer_linkedInCont svg:hover .social_oval {
-        fill: rgb(10, 130, 190);
-      }
+      footer #footer_emailGlyph:hover { border: 1px solid Black; }
+      footer .footer_linkedInCont svg:hover .social_oval { fill: rgb(10, 130, 190); }
+
+
+
+
+
+
+
+
+
+
+
+
+
+.flex-contact {
+  position: relative;
+  display: inline-flex;
+  width: 45%;
+  height: 100%;
+  flex-flow: column nowrap;
+  justify-content: center;
+  float: left;
+}
+.flex-contact:last-child { float: right; }
