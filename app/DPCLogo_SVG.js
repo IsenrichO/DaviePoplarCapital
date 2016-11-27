@@ -12,7 +12,7 @@ const DPCLogo = () => (
     <text
       x="50%"
       y="52.5%"
-      text-anchor="middle"
+      textAnchor="middle"
       style={{
         font: 'bold 100px/110px Georgia, sans-serif',
         fill: '#FFF',
@@ -21,7 +21,7 @@ const DPCLogo = () => (
     <text
       x="50%"
       y="72.5%"
-      text-anchor="middle"
+      textAnchor="middle"
       fill="White"
       style={{
         font: 'small-caps lighter 35px/35px Georgia, sans-serif',
