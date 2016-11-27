@@ -22,13 +22,14 @@ module.exports = {
       }, { 
         test: /\.json$/i, 
         loader: 'json'
-      }, {
+      }
+      /* , {
         test: /\.(jpe?g|png|gif|svg)$/i,
         loader: 'file-loader?name=/images/[name].[ext]'
       }, {
         test: /\.pdf/i,
         loader: 'file-loader?name=/docs/[name].[ext]'
-      }
+      } */
     ]
   },
   devServer: {
