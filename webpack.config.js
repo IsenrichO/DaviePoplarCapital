@@ -1,17 +1,45 @@
-const webpack = require('webpack');
-const path = require('path');
+const webpack = require('webpack'),
+      path = require('path');
 
+module.exports = {
+  entry: './app/Main.js',
+  output: {
+    path: './public',
+    filename: 'js/bundle.js',
+    publicPath: 'http://www.daviepoplarcapital.com/public'
+  },
+  devServer: {
+    inline: true,
+    contentBase: './',
+    port: 8100
+  },
+  module: {
+    loaders: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel'
+      }, { 
+        test: /\.json$/i, 
+        loader: 'json'
+      }
+    ]
+  },
+  plugins: []
+}
 
+/*
 module.exports = {
   devtool: 'cheap-eval-source-map',
   entry: [
-    path.join(__dirname, 'app/app')
+    path.join(__dirname, './app/app.js')
+    // path.join(__dirname, './app/app.js')
   ],
   output: {
     path: path.join(__dirname, 'public'),
     filename: './js/bundle.js',
     publicPath: 'http://www.daviepoplarcapital.com/'
-    // publicPath: 'http://isenrich.io/public'
+    // sourceMapFilename: "public/js/bundle.map"
   },
   module: {
     loaders: [
@@ -19,17 +47,14 @@ module.exports = {
         test: /\.jsx?$/i,
         exclude: /node_modules/,
         loaders: ['babel']
-      }, { 
-        test: /\.json$/i, 
-        loader: 'json'
       }
-      /* , {
-        test: /\.(jpe?g|png|gif|svg)$/i,
-        loader: 'file-loader?name=/images/[name].[ext]'
-      }, {
-        test: /\.pdf/i,
-        loader: 'file-loader?name=/docs/[name].[ext]'
-      } */
+      // , {
+      //   test: /\.(jpe?g|png|gif|svg)$/i,
+      //   loader: 'file-loader?name=/images/[name].[ext]'
+      // }, {
+      //   test: /\.pdf/i,
+      //   loader: 'file-loader?name=/docs/[name].[ext]'
+      // }
     ]
   },
   devServer: {
@@ -41,24 +66,6 @@ module.exports = {
     port: 3000,
     host: 'localhost'
   },
-  plugins: [
-    // new webpack.LoaderOptionsPlugin({
-    //   minimize: true,
-    //   debug: false
-    // }),
-    // new webpack.optimize.UglifyJsPlugin({
-    //   compress: {
-    //     warnings: false
-    //   },
-    //   output: {
-    //     comments: false
-    //   },
-    //   sourceMap: false
-    // }),
-    // new webpack.DefinePlugin({
-    //   'process.env': {
-    //     'NODE_ENV': JSON.stringify('production')
-    //   }
-    // })
-  ]
+  plugins: []
 };
+*/
