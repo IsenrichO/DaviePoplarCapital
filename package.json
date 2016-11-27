@@ -6,8 +6,8 @@
   "scripts": {
     "start": "nodemon",
     "dev": "webpack-dev-server",
-    "dev-server-mods": "webpack-dev-server --progress --profile --colors",
-    "dev-server-inline": "webpack-dev-server --inline"
+    "dev-server-inline": "webpack-dev-server --inline",
+    "dev-server-mods": "webpack-dev-server --progress --profile --colors"
   },
   "repository": {
     "type": "git",
