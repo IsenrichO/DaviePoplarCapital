@@ -411,3 +411,12 @@ footer {
 }
 .flex-contact:first-child { border-right: 1px solid #C0C0C0; }
 .flex-contact:last-child { float: right; }
+
+#maps-container {
+  position: relative;
+  display: block;
+  width: 675px;
+  height: 250px;
+  margin: auto;
+}
+
