@@ -8,25 +8,30 @@ module.exports = {
     filename: 'js/bundle.js',
     publicPath: 'http://www.daviepoplarcapital.com/public'
   },
-  devServer: {
-    inline: true,
-    contentBase: './',
-    port: 8100
-  },
   module: {
     loaders: [
       {
-        test: /\.js$/,
+        test: /\.js$/i,
         exclude: /node_modules/,
         loader: 'babel'
       }, { 
         test: /\.json$/i, 
         loader: 'json'
+      }, {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        loader: 'file-loader?name=/images/[name].[ext]'
       }
     ]
   },
+  devtool: 'cheap-eval-source-map',
+  devServer: {
+    inline: true,
+    contentBase: './',
+    port: 8100
+  },
   plugins: []
 }
+
 
 /*
 module.exports = {
