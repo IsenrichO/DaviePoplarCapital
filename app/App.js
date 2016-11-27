@@ -23,7 +23,7 @@ const App = () => (
       <Route path='/about' component={ About } />
       <Route path='/focus' component={ Focus } />
       <Route path='/contact' component={ Contact } />
-      <Route path='*' component={ NotFound } />
+      <Route path='*' component={ Error404 } />
     </Route>
   </Router>
 );
