@@ -1,7 +1,7 @@
 'use strict';
 import React from 'react';
 
-import BusinessFocusData from './constants/json/BusinessFocusData.json';
+import BusinessFocusData from '../constants/json/BusinessFocusData.json';
 
 
 const renderParameters = (params) => params.map((param, index, list) =>
