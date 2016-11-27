@@ -1,5 +1,6 @@
 'use strict';
 import React, { Component } from 'react';
+import { Link } from 'react-router';
 
 // Control of sidebar navigation menu display and behavior:
 const toggleNav = () => {
@@ -34,7 +35,9 @@ const toggleNav = () => {
 };
 
 
-const NavBar = () => (
+export default class NavBar extends Component {
+  render() {
+    return (
   <div id="nav-bar">
     <span
       id="hamburger-icon"
@@ -42,24 +45,51 @@ const NavBar = () => (
       data-charRef="HTML Character, Heaven Trigram (a.k.a. the 'hamburger' icon): ☰">&#9776;</span>
     <div id="nav-links-wrapper">
       <nav
-        id="inter-pageNavBar"
-        data-styleRef="color: White; text-shadow: 0 0 5px White;">
-        <a
-          href="index.html"
-          style={{ color: 'rgb(79, 152, 201)', background: '#FFF' }}
-          data-targetRef="http://www.daviepoplarcapital.com/new-home.html">&nbsp;Home</a> 
-        <a
-          href="About.html"
-          data-targetRef="http://www.daviepoplarcapital.com/about.html">&nbsp;About</a>
-        <a
-          href="Focus.html"
-          data-targetRef="http://www.daviepoplarcapital.com/focus.html">&nbsp;Focus</a>
-        <a
-          href="Contact.html"
-          data-targetRef="http://www.daviepoplarcapital.com/contact.html">&nbsp;Contact</a>
+        data-styleRef="color: White; text-shadow: 0 0 5px White;"
+        id="inter-pageNavBar">
+        <Link
+          to="/"
+          // <a
+          //   href="index.html"
+          // style={{
+          //   color: 'rgb(79, 152, 201)',
+          //   background: '#FFF'
+          // }}
+          // data-targetRef="http://www.daviepoplarcapital.com/new-home.html"
+        >
+          Home
+        </Link>
+
+        <Link
+          to="about"
+          // <a
+          //   href="About.html"
+          // data-targetRef="http://www.daviepoplarcapital.com/about.html"
+        >
+          About
+        </Link>
+
+        <Link
+          to="focus"
+          // <a
+          //   href="Focus.html"
+          // data-targetRef="http://www.daviepoplarcapital.com/focus.html"
+        >
+          Focus
+        </Link>
+
+        <Link
+          to="contact"
+          // <a
+          //   href="Contact.html"
+          // data-targetRef="http://www.daviepoplarcapital.com/contact.html"
+        >
+          Contact
+        </Link>
       </nav>
     </div>
   </div>
-);
+  );
+  }
 
-export default NavBar;
+};
