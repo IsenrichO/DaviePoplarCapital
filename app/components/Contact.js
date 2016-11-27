@@ -1,22 +1,25 @@
 'use strict';
 import React, { Component } from 'react';
 
+import GMap from './GMap';
+
+
 const Contact = () => (
   <div id="centerFill" style={{ top: '17.5%', transform: 'none' }}>
     <h3>Please contact us to discuss investment opportunities</h3>
     <div style={{ background: '#FFF', width: '100%', height: '175px' }}>
       
-        <div className="flex-contact">
-          <p>Ralph Isenrich, CFA</p>
-          <p>ralph@daviepoplarcapital.com</p>
-          <p>(m) +1 (919) 334-8367</p>
-          <a
-            className="primary-btn"
-            href="Resources/Ralph Isenrich CFA.vcf"
-            download="Ralph Isenrich, CFA">
-            Download vCard
-          </a>
-        </div>
+      <div className="flex-contact">
+        <p>Ralph Isenrich, CFA</p>
+        <p>ralph@daviepoplarcapital.com</p>
+        <p>(m) +1 (919) 334-8367</p>
+        <a
+          className="primary-btn"
+          href="Resources/Ralph Isenrich CFA.vcf"
+          download="Ralph Isenrich, CFA">
+          Download vCard
+        </a>
+      </div>
 
       <div className="flex-contact">
         <p>Davie Poplar Capital, LLC.</p>
@@ -29,11 +32,8 @@ const Contact = () => (
           Subscribe for News & Updates
         </a>
       </div>
-    </div>
 
-      <div style={{ display: 'block', position: 'relative' }}>
-        <div id="maps_Cont">
-      </div>
+      <GMap />
 
       <div className="toolTip" id="toolTip">
         <span className="DPC_Address">185 Windchime Ct, Suite 201</span>
