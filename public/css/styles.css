@@ -402,10 +402,12 @@ footer {
 .flex-contact {
   position: relative;
   display: inline-flex;
-  width: 45%;
-  height: 100%;
+  width: 50%;
+  height: 94%;
+  top: 3%;
   flex-flow: column nowrap;
   justify-content: center;
   float: left;
 }
+.flex-contact:first-child { border-right: 1px solid #C0C0C0; }
 .flex-contact:last-child { float: right; }
