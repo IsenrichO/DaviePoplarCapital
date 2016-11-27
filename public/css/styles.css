@@ -1,13 +1,9 @@
 body {
-  background: White url("../Graphics/Site_bg.jpeg") no-repeat;
-  background-attachment: fixed;
-  background-size: 100% auto;
-  background-position: top center;
   width: 100%;
-  min-height: 150%;
-  max-height: 2000px;
   margin: 0;
   padding: 0;
+  background: #FFF url(../images/Site_bg.jpeg) no-repeat top center / cover;
+  background-attachment: fixed;
 }
 #nav-links-wrapper {
   position: fixed;
@@ -17,7 +13,6 @@ body {
   top: 0;
   left: 0;
   background: rgba(79, 152, 201, 0.80);
-    /* Alternative Background Color (CSS3 Color):  "SlateGray";  */
   padding: 0;
   vertical-align: middle;
   font: 200 28px/20px Open Sans, sans-serif;
@@ -31,11 +26,16 @@ body {
     animation:         sideExpand 0.35s ease-out forwards;
   }
   #nav-links-wrapper.inactive {
-    -webkit-animation: sideExpand 0.35s ease-out backwards;
+  /*-webkit-animation: sideExpand 0.35s ease-out backwards;
     -moz-animation:    sideExpand 0.35s ease-out backwards;
     -ms-animation:     sideExpand 0.35s ease-out backwards;
     -o-animation:      sideExpand 0.35s ease-out backwards;
-    animation:         sideExpand 0.35s ease-out backwards;
+    animation:         sideExpand 0.35s ease-out backwards; */
+    -webkit-animation: sideCollapse 0.35s ease-out forwards;
+    -moz-animation:    sideCollapse 0.35s ease-out forwards;
+    -ms-animation:     sideCollapse 0.35s ease-out forwards;
+    -o-animation:      sideCollapse 0.35s ease-out forwards;
+    animation:         sideCollapse 0.35s ease-out forwards;
   }
 
 #hamburger-icon {
@@ -46,14 +46,13 @@ body {
   color: rgb(79, 152, 201);
   font: 40px/40px Open Sans, sans-serif;
   z-index: 1100;
+  cursor: pointer;
   -webkit-transition: transform 0.35s ease-out;
   -moz-transition:    transform 0.35s ease-out;
   -ms-transition:     transform 0.35s ease-out;
   -o-transition:      transform 0.35s ease-out;
   transition:         transform 0.35s ease-out;
-} 
-  #hamburger-icon:hover { cursor: pointer; }
-
+}
 #inter-pageNavBar {
   display: block;
   position: absolute;
