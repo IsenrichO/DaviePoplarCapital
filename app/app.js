@@ -2,6 +2,8 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
+import NavBar from './NavBar';
+
 // Top-level React (pure functional) component:
 const App = () => (
   <div>
