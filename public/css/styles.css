@@ -9,9 +9,10 @@ body {
   margin: 0;
   padding: 0;
 }
-#navBar_Cont {
+#nav-links-wrapper {
   position: fixed;
-  display: none;
+  /*display: none;*/
+  width: 0;
   height: 100%;
   top: 0;
   left: 0;
@@ -21,13 +22,23 @@ body {
   vertical-align: middle;
   font: 200 28px/20px Open Sans, sans-serif;
   z-index: 1000;
-  -webkit-animation: sideExpand 0.35s ease-out forwards;
-  -moz-animation:    sideExpand 0.35s ease-out forwards;
-  -ms-animation:     sideExpand 0.35s ease-out forwards;
-  -o-animation:      sideExpand 0.35s ease-out forwards;
-  animation:         sideExpand 0.35s ease-out forwards;
 }
-#dropDown_Btn {
+  #nav-links-wrapper.active {
+    -webkit-animation: sideExpand 0.35s ease-out forwards;
+    -moz-animation:    sideExpand 0.35s ease-out forwards;
+    -ms-animation:     sideExpand 0.35s ease-out forwards;
+    -o-animation:      sideExpand 0.35s ease-out forwards;
+    animation:         sideExpand 0.35s ease-out forwards;
+  }
+  #nav-links-wrapper.inactive {
+    -webkit-animation: sideExpand 0.35s ease-out backwards;
+    -moz-animation:    sideExpand 0.35s ease-out backwards;
+    -ms-animation:     sideExpand 0.35s ease-out backwards;
+    -o-animation:      sideExpand 0.35s ease-out backwards;
+    animation:         sideExpand 0.35s ease-out backwards;
+  }
+
+#hamburger-icon {
   position: fixed;
   display: block;
   left: 1%;
@@ -41,9 +52,7 @@ body {
   -o-transition:      transform 0.35s ease-out;
   transition:         transform 0.35s ease-out;
 } 
-  #dropDown_Btn:hover {
-    cursor: pointer;
-  }
+  #hamburger-icon:hover { cursor: pointer; }
 
 #inter-pageNavBar {
   display: block;
