@@ -1,0 +1,83 @@
+
+/*        DECLARATION OF SITE ANIMATION KEYFRAMES:      */
+
+
+/*  Left navigation sidebar growth animation: */
+@-webkit-keyframes sideExpand {
+  0% { width: 0%; }
+  100% {
+    width: 20vw;
+    min-width: 250px;
+  }
+}
+@-moz-keyframes sideExpand {
+  0% { width: 0%; }
+  100% {
+    width: 20vw;
+    min-width: 250px;
+  }
+}
+@-o-keyframes sideExpand {
+  0% { width: 0%; }
+  100% {
+    width: 20vw;
+    min-width: 250px;
+  }
+}
+@keyframes sideExpand {
+  0% { width: 0%; }
+  100% {
+    width: 20vw;
+    min-width: 250px;
+  }
+}
+
+
+/*  Left navigation sidebar collapse animation: */
+@-webkit-keyframes sideCollapse {
+  from {
+    width: 20vw;
+    min-width: 250px;
+  }
+  to { width: 0%; }
+}
+@-moz-keyframes sideCollapse {
+  from {
+    width: 20vw;
+    min-width: 250px;
+  }
+  to { width: 0%; }
+}
+@-o-keyframes sideCollapse {
+  from {
+    width: 20vw;
+    min-width: 250px;
+  }
+  to { width: 0%; }
+}
+@keyframes sideCollapse {
+  from {
+    width: 20vw;
+    min-width: 250px;
+  }
+  to { width: 0%; }
+}
+
+
+/*  Visible-to-hidden keyframe animation:   */
+@-webkit-keyframes fader {
+  from { visibility: hidden; }
+  to { visibility: visible; }
+}
+@-moz-keyframes fader {
+  from { visibility: hidden; }
+  to { visibility: visible; }
+}
+@-o-keyframes fader {
+  from { visibility: hidden; }
+  to { visibility: visible; }
+}
+@keyframes fader {
+  from { visibility: hidden; }
+  to { visibility: visible; }
+}
