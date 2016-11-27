@@ -38,7 +38,7 @@ const NavBar = () => (
   <div id="nav-bar">
     <span
       id="hamburger-icon"
-      onClick={ () => toggleNav() }
+      onClick={ toggleNav }
       data-charRef="HTML Character, Heaven Trigram (a.k.a. the 'hamburger' icon): ☰">&#9776;</span>
     <div id="nav-links-wrapper">
       <nav
