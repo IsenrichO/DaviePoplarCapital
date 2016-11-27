@@ -8,7 +8,6 @@ import NavBar from './NavBar';
 const App = () => (
   <div>
     <NavBar />
-    Hello, World!
   </div>
 );
 
