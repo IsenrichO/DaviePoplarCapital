@@ -7,6 +7,7 @@ import NavBar from './NavBar';
 // Top-level React (pure functional) component:
 const App = () => (
   <div>
+    <NavBar />
     Hello, World!
   </div>
 );
