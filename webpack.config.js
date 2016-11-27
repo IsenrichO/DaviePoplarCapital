@@ -10,7 +10,8 @@ module.exports = {
   output: {
     path: path.join(__dirname, 'public'),
     filename: './js/bundle.js',
-    publicPath: 'http://isenrich.io/public'
+    publicPath: 'http://www.daviepoplarcapital.com/'
+    // publicPath: 'http://isenrich.io/public'
   },
   module: {
     loaders: [
