@@ -420,3 +420,17 @@ footer {
   margin: auto;
 }
 
+#centerFill h3.info-window {
+  display: inline;
+  color: #74add2;
+  font-weight: bold;
+}
+
+#centerFill p.info-window {
+  display: block;
+  width: 100%;
+  text-align: left;
+  text-indent: 0;
+  font: lighter 0.7rem/1.5 auto;
+  overflow: hidden;
+}
