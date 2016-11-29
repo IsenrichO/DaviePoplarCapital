@@ -34,11 +34,6 @@ const Contact = () => (
       </div>
 
       <GMap />
-
-      <div className="toolTip" id="toolTip">
-        <span className="DPC_Address">185 Windchime Ct, Suite 201</span>
-        <span className="DPC_Address">Raleigh NC 27615 US</span>
-      </div>
     </div>
   </div>
 );
@@ -85,3 +80,8 @@ export default Contact;
 // </div>
 
 // <p style={{ display: 'block', marginLeft: '0' }}>(m) +1 (919) 334-8367</p>
+
+// <div className="toolTip" id="toolTip">
+//   <span className="DPC_Address">185 Windchime Ct, Suite 201</span>
+//   <span className="DPC_Address">Raleigh NC 27615 US</span>
+// </div>
