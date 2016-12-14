@@ -1,12 +1,12 @@
 'use strict';
-import React, { Component } from 'react';
+import React from 'react';
 
 import GMap from './GMap';
 
 
 const Contact = () => (
   <div className="flexbox-col">
-    <div id="centerFill">
+    <div className="center-cont">
       <h3>Please contact us to discuss investment opportunities</h3>
       <div style={{ background: '#FFF', width: '100%', height: '175px' }}>
         <div className="flex-contact">
