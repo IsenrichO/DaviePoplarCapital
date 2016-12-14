@@ -2,12 +2,13 @@
   "name": "DaviePoplarCapital",
   "version": "2.0.0",
   "description": "Personal portfolio website git repository for Oliver Isenrich",
-  "main": "index.js",
+  "main": "webpack.config.js",
   "scripts": {
     "start": "nodemon",
     "dev": "webpack-dev-server",
     "dev-server-inline": "webpack-dev-server --inline",
-    "dev-server-mods": "webpack-dev-server --progress --profile --colors"
+    "dev-server-mods": "webpack-dev-server --progress --profile --colors",
+    "watch": "webpack --watch"
   },
   "repository": {
     "type": "git",
@@ -22,7 +23,11 @@
     "Website",
     "Developer"
   ],
-  "author": "Oliver Isenrich",
+  "author": {
+    "name": "Oliver Isenrich",
+    "email": "IsenrichO@gmail.com",
+    "url": "http://isenrich.io"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/IsenrichO/DaviePoplarCapital/issues"
