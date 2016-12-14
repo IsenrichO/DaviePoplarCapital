@@ -73,10 +73,10 @@ export default class GMap extends Component {
     return (
       <InfoWindow onCloseclick={ this.handleInfoWindowDisplayState } >
         <div className="info-window">
-          <h3 className="info-window">Davie Poplar Capital</h3>
+          <h3>Davie Poplar Capital</h3>
           <hr />
-          <p className="info-window">185 Windchime Ct, Suite 201</p>
-          <p className="info-window">Raleigh, NC 27615 US</p>
+          <p>185 Windchime Ct, Suite 201</p>
+          <p>Raleigh, NC 27615 US</p>
         </div>
       </InfoWindow>
     );
