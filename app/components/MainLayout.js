@@ -1,3 +1,4 @@
+'use strict';
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 
@@ -12,9 +13,9 @@ export default class MainLayout extends Component {
 
   render() {
     return (
-      <div id='main-layout'>
+      <div className="main-layout">
         <NavBar />
-        <main id='main-content'>
+        <main className="main-content">
           {this.props.children}
         </main>
         <Footer />
