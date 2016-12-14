@@ -1,4 +1,4 @@
-// 'use strict';
+'use strict';
 import React, { Component } from 'react';
 import { withGoogleMap, GoogleMapLoader, GoogleMap, Marker, InfoWindow } from 'react-google-maps';
 
