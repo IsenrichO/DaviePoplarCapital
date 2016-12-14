@@ -4,9 +4,9 @@ const webpack = require('webpack'),
 module.exports = {
   entry: './app/Main.js',
   output: {
-    path: './public',
-    filename: 'js/bundle.js',
-    publicPath: 'http://www.daviepoplarcapital.com/public'
+    path: 'public/js/',
+    filename: 'bundle.js',
+    publicPath: 'http://www.daviepoplarcapital.com/'
   },
   module: {
     loaders: [
@@ -23,6 +23,16 @@ module.exports = {
       }
     ]
   },
+  plugins: [
+    // new webpack.DefinePlugin({
+    //   'process.env': {
+    //     'NODE_ENV': JSON.stringify('production')
+    //   }
+    // }),
+    new webpack.optimize.DedupePlugin(),
+    new webpack.optimize.UglifyJsPlugin(),
+    new webpack.optimize.AggressiveMergingPlugin()
+  ],
   devtool: 'cheap-eval-source-map',
   devServer: {
     inline: true,
