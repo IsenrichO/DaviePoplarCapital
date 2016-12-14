@@ -1,0 +1,8 @@
+
+
+
+// Import Sass Partials:
+@import './partials/global';      // Styles for base-level HTML tags sans any selectors
+@import './partials/main';        // Custom styles for classes
+@import './partials/svg';         // Styles for inline-rendered SVG elements
+@import './partials/keyframes';   // Styles for CSS animations based on keyframes CSS at-rule

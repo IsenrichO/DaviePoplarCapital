@@ -1,0 +1,53 @@
+
+// Sass Variable Declarations:
+$PUBLIC_BASE: 'http://www.daviepoplarcapital.com/public/';
+
+
+// Styles:
+* {
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html { font-size: 14px; }
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: #FFF url('#{$PUBLIC_BASE}images/Site_bg.jpeg') no-repeat fixed top left / cover;
+  // background: #FFF url(../images/Site_bg.jpeg) no-repeat fixed top left / cover;
+  overflow: hidden;
+}
+
+main {
+  display: flex;
+  width: 100vw;
+  height: 93vh;
+  bottom: 7vh;
+  margin: 0;
+  padding: 0;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+a,
+a:visited,
+a:focus,
+a:active { text-decoration: none; }
+
+footer {
+  position: absolute;
+  display: block;
+  width: 100vw;
+  height: 7vh;
+  left: 0;
+  bottom: 0;
+  background: #202020;
+  z-index: 1005;
+}
