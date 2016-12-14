@@ -3,6 +3,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Route, IndexRoute, hashHistory, browserHistory } from 'react-router'
 
+import '../public/styles/master.scss';
+
 // Route-specific views:
 import Home from './components/Home';
 import About from './components/About';
