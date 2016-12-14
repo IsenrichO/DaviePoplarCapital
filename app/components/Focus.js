@@ -15,7 +15,7 @@ const renderParameters = (params) => params.map((param, index, list) =>
       );
 
 const Focus = () => (
-  <div id="centerFill" style={{ top: '17.5%', transform: 'none' }}>
+  <div id="centerFill">
     <h3>DPC invests in businesses within the following parameters</h3>
     <div style={{ paddingBottom: '25px' }}>
       { renderSections(BusinessFocusData) }
