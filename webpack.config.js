@@ -1,19 +1,30 @@
-const webpack = require('webpack'),
-      path = require('path');
+const webpack = require('webpack');
+const path = require('path');
+
 
 module.exports = {
-  entry: './app/Main.js',
+  entry: [
+    path.join(__dirname, 'app/Main.js')
+  ],
   output: {
-    path: 'public/js/',
-    filename: 'bundle.js',
-    publicPath: 'http://www.daviepoplarcapital.com/'
+    path: path.join(__dirname, 'public/js'),
+    filename: 'bundle.js'
+    // publicPath: 'http://www.daviepoplarcapital.com/'
   },
   module: {
     loaders: [
       {
-        test: /\.js$/i,
+        test: /\.jsx?$/i,
         exclude: /node_modules/,
         loader: 'babel'
+      }, {
+        test: /\.scss$/i,
+        loaders: [
+          'style',
+          'css',
+          'autoprefixer?browsers=last 3 versions',
+          'sass?outputStyle=expanded'
+        ]
       }, { 
         test: /\.json$/i, 
         loader: 'json'
@@ -23,24 +34,24 @@ module.exports = {
       }
     ]
   },
+  watch: true,
+  devtool: 'cheap-eval-source-map',
+  devServer: {
+    // contentBase: './public',
+    inline: true,
+    port: 8100
+  },
   plugins: [
-    // new webpack.DefinePlugin({
-    //   'process.env': {
-    //     'NODE_ENV': JSON.stringify('production')
-    //   }
-    // }),
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': JSON.stringify('production')
+      }
+    }),
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.UglifyJsPlugin(),
     new webpack.optimize.AggressiveMergingPlugin()
-  ],
-  devtool: 'cheap-eval-source-map',
-  devServer: {
-    inline: true,
-    contentBase: './',
-    port: 8100
-  },
-  plugins: []
-}
+  ]
+};
 
 
 /*
