@@ -130,7 +130,7 @@ a:active { text-decoration: none; }
   bottom: 1%;
   margin: 0 auto;
 }
-#centerFill {
+.center-cont {
   position: relative;
   width: 675px; 
   height: auto;
@@ -142,19 +142,19 @@ a:active { text-decoration: none; }
   -o-transform:      translateY(-50%);
   transform:         translateY(-50%); */
 }
-  #centerFill svg:hover {
+  .center-cont svg:hover {
     box-shadow: 0 0 2px 0.5px rgba(255, 255, 255, 0.5);
   }
-  #centerFill > a {
+  .center-cont > a {
     text-align: center;
   }
-    #centerFill > a > img {
+    .center-cont > a > img {
       width: 75%;
       height: auto;
       text-align: center;
     }
 
-  #centerFill > h3 {
+  .center-cont > h3 {
     text-align: center;
     display: block;
     color: White;
@@ -165,7 +165,7 @@ a:active { text-decoration: none; }
     margin: 0;
   }
 
-  #centerFill > div {
+  .center-cont > div {
     position: relative;
     display: block;
     width: 100%;
@@ -174,7 +174,7 @@ a:active { text-decoration: none; }
     padding: 0;
     background: #FFF;
   }
-    #centerFill > div p {
+    .center-cont > div p {
       position: relative;
       display: inline-block;
       width: 95%;
@@ -186,22 +186,22 @@ a:active { text-decoration: none; }
       text-indent: 15%;
       text-align: left;
     }
-    #centerFill > div > .third {
+    .center-cont > div > .third {
       width: 32.5%;
       display: inline-block;
       position: relative;
       text-align: left;
       vertical-align: top;
     }
-    #centerFill > div > div.contact_Info {
+    .center-cont > div > div.contact_Info {
       display: inline-block;
       position: relative;
       width: 40%;
       margin: 25px auto 5px 5%;
     }
-      #centerFill > div > div.contact_Info p { width: 100%; }
+      .center-cont > div > div.contact_Info p { width: 100%; }
 
-    #centerFill > div div.contact_Btns {
+    .center-cont > div div.contact_Btns {
       margin: 10px auto 5% 0;
       text-align: left;
     }
@@ -228,7 +228,7 @@ a:active { text-decoration: none; }
       }
         #centerFill > div div.contact_Btns a:last-child { margin: auto; }
         .primary-btn:hover {
-          box-shadow: 1px 1px 5px 0.5px Grey;
+          box-shadow: 0px 11px 13px 0.5px #B3B3B3;
           background: #FFF;
           color: rgb(79, 152, 201);
         }
