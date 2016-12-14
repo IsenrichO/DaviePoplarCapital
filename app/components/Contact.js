@@ -5,36 +5,57 @@ import GMap from './GMap';
 
 
 const Contact = () => (
-  <div id="centerFill" style={{ top: '17.5%', transform: 'none' }}>
-    <h3>Please contact us to discuss investment opportunities</h3>
-    <div style={{ background: '#FFF', width: '100%', height: '175px' }}>
-      
-      <div className="flex-contact">
-        <p>Ralph Isenrich, CFA</p>
-        <p>ralph@daviepoplarcapital.com</p>
-        <p>(m) +1 (919) 334-8367</p>
-        <a
-          className="primary-btn"
-          href="Resources/Ralph Isenrich CFA.vcf"
-          download="Ralph Isenrich, CFA">
-          Download vCard
-        </a>
+  <div className="flexbox-col">
+    <div id="centerFill">
+      <h3>Please contact us to discuss investment opportunities</h3>
+      <div style={{ background: '#FFF', width: '100%', height: '175px' }}>
+        <div className="flex-contact">
+          <p>
+            {[
+              <i key={ `FAIcon_User` } className="fa fa-user-circle" />,
+              `Ralph Isenrich, CFA`
+            ]}
+          </p>
+          <p>
+            {[
+              <i key={ `FAIcon_Envelope` } className="fa fa-envelope" />,
+              `ralph@daviepoplarcapital.com`
+            ]}
+          </p>
+          <p>
+            {[
+              <i key={ `FAIcon_Phone` } className="fa fa-phone-square" />,
+              `(m) +1 (919) 334-8367`
+            ]}
+          </p>
+          <a
+            className="primary-btn"
+            href="Resources/Ralph Isenrich CFA.vcf"
+            download="Ralph Isenrich, CFA">
+            {[
+              <i key={ `FAIcon_AddressCard` } className="fa fa-address-card invert" />,
+              `Download vCard`
+            ]}
+          </a>
+        </div>
+        <div className="flex-contact">
+          <p>Davie Poplar Capital, LLC.</p>
+          <p>185 Windchime Ct., Suite 201</p>
+          <p>Raleigh, NC 27615</p>
+          <a
+            className="primary-btn"
+            href="http://eepurl.com/_30or"
+            target="_blank">
+            {[
+              <i key={ `FAIcon_Newspaper` } className="fa fa-newspaper-o invert" />,
+              `Subscribe for News & Updates`
+            ]}
+          </a>
+        </div>
       </div>
-
-      <div className="flex-contact">
-        <p>Davie Poplar Capital, LLC.</p>
-        <p>185 Windchime Ct., Suite 201</p>
-        <p>Raleigh, NC 27615</p>
-        <a
-          className="primary-btn"
-          href="http://eepurl.com/_30or"
-          target="_blank">
-          Subscribe for News & Updates
-        </a>
-      </div>
-
-      <GMap />
     </div>
+
+    <GMap />
   </div>
 );
 
