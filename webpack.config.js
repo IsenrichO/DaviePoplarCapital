@@ -50,7 +50,16 @@ module.exports = {
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.UglifyJsPlugin(),
     new webpack.optimize.AggressiveMergingPlugin()
-  ]
+  ],
+  stats: {
+    colors: true,
+    modules: true,
+    reasons: true,
+    errorDetails: true
+  },
+  resolve: {
+    extensions: ['', '.js', '.jsx']
+  }
 };
 
 
