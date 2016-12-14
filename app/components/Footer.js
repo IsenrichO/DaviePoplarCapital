@@ -2,6 +2,7 @@
 import React from 'react';
 
 import LinkedInLogo from '../constants/svg/LinkedInLogo_SVG';
+import EmailGlyph from '../constants/svg/EmailGlyph_SVG';
 
 
 // Function
@@ -29,11 +30,7 @@ const Footer = () => (
         className="footer_emailCont footer_SocialShare"
         href="mailto:ralph@daviepoplarcapital.com"
         style={{ left: '0' }}>
-        <img
-          id="footer_emailGlyph"
-          src="../public/images/Logo.png"
-          alt="Email social share icon (MediumSeaGreen)"
-          onMouseOut={ () => revertPic('footer_emailGlyph') } />
+        <EmailGlyph />
       </a>
     </div>
   </footer>
