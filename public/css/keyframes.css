@@ -1,0 +1,131 @@
+
+/*        DECLARATION OF SITE ANIMATION KEYFRAMES:      */
+
+
+/*  Left navigation sidebar growth animation: */
+@-webkit-keyframes sideExpand {
+  0% {
+    width: 0%;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+  }
+  100% {
+    width: 20vw;
+    min-width: 250px;
+    opacity: 1;
+    visibility: visible;
+    overflow: visible;
+  }
+}
+@-moz-keyframes sideExpand {
+  0% {
+    width: 0%;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+  }
+  100% {
+    width: 20vw;
+    min-width: 250px;
+    opacity: 1;
+    visibility: visible;
+    overflow: visible;
+  }
+}
+@-o-keyframes sideExpand {
+  0% {
+    width: 0%;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+  }
+  100% {
+    width: 20vw;
+    min-width: 250px;
+    opacity: 1;
+    visibility: visible;
+    overflow: visible;
+  }
+}
+@keyframes sideExpand {
+  0% {
+    width: 0%;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+  }
+  100% {
+    width: 20vw;
+    min-width: 250px;
+    opacity: 1;
+    visibility: visible;
+    overflow: visible;
+  }
+}
+
+
+/*  Left navigation sidebar collapse animation: */
+@-webkit-keyframes sideCollapse {
+  from {
+    width: 20vw;
+    min-width: 250px;
+    overflow: visible;
+  }
+  to {
+    width: 0%;
+    overflow: hidden;
+  }
+}
+@-moz-keyframes sideCollapse {
+  from {
+    width: 20vw;
+    min-width: 250px;
+    overflow: visible;
+  }
+  to {
+    width: 0%;
+    overflow: hidden;
+  }
+}
+@-o-keyframes sideCollapse {
+  from {
+    width: 20vw;
+    min-width: 250px;
+    overflow: visible;
+  }
+  to {
+    width: 0%;
+    overflow: hidden;
+  }
+}
+@keyframes sideCollapse {
+  from {
+    width: 20vw;
+    min-width: 250px;
+    overflow: visible;
+  }
+  to {
+    width: 0%;
+    overflow: hidden;
+  }
+}
+
+
+/*  Visible-to-hidden keyframe animation:   */
+@-webkit-keyframes fader {
+  from { visibility: hidden; }
+  to { visibility: visible; }
+}
+@-moz-keyframes fader {
+  from { visibility: hidden; }
+  to { visibility: visible; }
+}
+@-o-keyframes fader {
+  from { visibility: hidden; }
+  to { visibility: visible; }
+}
+@keyframes fader {
+  from { visibility: hidden; }
+  to { visibility: visible; }
+}
