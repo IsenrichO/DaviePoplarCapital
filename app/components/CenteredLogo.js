@@ -1,11 +1,11 @@
 'use strict';
-import React, { Component } from 'react';
+import React from 'react';
 
-import DPCLogo from './constants/svg/DPCLogo_SVG';
+import DPCLogo from '../constants/svg/DPCLogo_SVG';
 
 
 const CenteredLogo = () => (
-  <div id="centerFill">
+  <div className="center-cont">
     <a href="About.html">
       <DPCLogo />
     </a>
