@@ -6,19 +6,15 @@ import EmailGlyph from '../constants/svg/EmailGlyph_SVG';
 
 
 // Function
-(window.onload = function() {
-  (function appendCopyright() {
-    let currentYear = new Date().getFullYear(),
-        nodeText = `Copyright ${String.fromCharCode(169)} ${currentYear} \
-                    Davie Poplar Capital, LLC. | All Rights Reserved`,
-        copyrightText_Node = document.createTextNode(nodeText);
-    document.getElementById('copyright_Par').appendChild(copyrightText_Node);
-  })();
-});
+const appendCopyright = () => {
+  let currentYear = new Date().getFullYear();
+  return `Copyright ${String.fromCharCode(169)} ${currentYear} \
+              Davie Poplar Capital, LLC. | All Rights Reserved`;
+};
 
 const Footer = () => (
   <footer>
-    <p id="copyright_Par" />
+    <p id="copyright_Par">{ appendCopyright() }</p>
     <div>
       <a
         className="footer_linkedInCont footer_SocialShare"
@@ -37,12 +33,3 @@ const Footer = () => (
 );
 
 export default Footer;
-
-
-// Copyright &#169; 2016 Davie Poplar Capital, LLC. | All Rights Reserved
-// Hex Character Code: © = "&#169;"
-
-// <a className="footer_linkedInCont footer_SocialShare" href="https://www.linkedin.com/in/isenrichr" target="_blank;">
-//   <img id="footer_linkedInGlyph_Home" src="Graphics/LinkedIn Logo (Blue).svg" alt="LinkedIn social media platform corporate logo (Blue)" onmouseout="revertPic('footer_linkedInGlyph_Home')" />
-// </a>
-
