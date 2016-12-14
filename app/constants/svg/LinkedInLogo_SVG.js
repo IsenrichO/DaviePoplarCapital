@@ -4,15 +4,11 @@ import React from 'react';
 
 const LinkedInLogo = () => (
   <svg
-    id="footer_linkedInGlyph"
-    width="27px"
-    height="27px"
-    viewBox="0 0 27 27"
+    className="linkedIn-logo"
     version="1.1"
     xmlns="http://www.w3.org/2000/svg"
-    xmlnsXlink="http://www.w3.org/1999/xlink">
+    viewBox="0 0 27 27">
     <g
-      id="Page-1"
       stroke="none"
       strokeWidth="1"
       fill="none"
