@@ -13,7 +13,7 @@ const appendCopyright = () => {
 };
 
 const Footer = () => (
-  <footer>
+  <footer className="footer">
     <p id="copyright_Par">{ appendCopyright() }</p>
     <div>
       <a
