@@ -29,6 +29,9 @@ module.exports = {
         test: /\.json$/i, 
         loader: 'json'
       }, {
+        test: /\.(pdf|vcf|docx?)$/i,
+        loader: 'file-loader?name=/resources/[name].[ext]'
+      }, {
         test: /\.(jpe?g|png|gif|svg)$/i,
         loader: 'file-loader?name=/images/[name].[ext]'
       }
