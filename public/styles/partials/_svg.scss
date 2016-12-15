@@ -3,7 +3,7 @@
 .DPC-logo {
   width: 570px;
   height: 275px;
-  background-color: rgba(79, 152, 201, 0.75);
+  background-color: $theme-primary-op;
   letter-spacing: 3px;
 
   text {
@@ -17,114 +17,59 @@
       stroke: none;
     }
   }
-  line {
-    stroke: #FFF;
-    stroke-width: 1;
+  line { @include svg(#FFF, 1); }
+}
+
+
+// LinkedIn Logo:
+.linkedIn-logo {
+  circle {
+    @include cbCSSTransformation(transition, fill 0.3s ease-in-out);
+    fill: #E9E9E9;
+    cx: 13.8972857px;
+    cy: 13.7034643px;
+    r: 13.0178571px;
+    + g {
+      @include cbCSSTransformation(transform, translate(6.75px, 7.714286px));
+      @include svg(none, 0, 1);
+      path { fill: $content-dark; }
+    }
   }
+  > g:first-child { @include svg(none, 1, 1, none, 1, evenodd); }
+  &:hover circle { fill: $linkedIn-blue; }
 }
 
 
 // Email Glyph Icon:
 .email-glyph {
-  clipPath rect {
-    opacity: 1;
-    fill: #BA9E9E;
-    fill-opacity: 0.63157893;
-    fill-rule: nonzero;
-    stroke: none;
-    stroke-width: 2;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    stroke-miterlimit: 4;
-    stroke-dasharray: none;
-    stroke-dashoffset: 0;
-    stroke-opacity: 0.7676768;
+  rect {
+    @include svg(none, 2, 0.7676768, #BA9E9E, 0.63157893);
+    width: 500px;
+    height: 328.57144px;
   }
   #clipPath4175 path {
-    fill: none;
-    fill-rule: evenodd;
-    stroke: #000;
-    stroke-width: 10;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    stroke-miterlimit: 4;
-    stroke-dasharray: none;
-    stroke-opacity: 1;
+    @include svg(#000, 10, 1, none, 1, evenodd);
+    @include cbCSSTransformation(transform, translate(196px, 343px));
   }
   #clipPath4185 path,
-  #clipPath4195 path {
-    opacity: 1;
-    fill: #C28D8D;
-    fill-opacity: 1;
-    fill-rule: nonzero;
-    stroke: none;
-    stroke-width: 2;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    stroke-miterlimit: 4;
-    stroke-dasharray: none;
-    stroke-dashoffset: 0;
-    stroke-opacity: 0.7676768;
+  #clipPath4195 path { @include svg(none, 2, 0.7676768, #C28D8D); }
+  #clipPath4185 path { @include cbCSSTransformation(transform, matrix(1, 0, 0, 1.0581841, 402.23997, -201.34757)); }
+  #clipPath4195 path { @include cbCSSTransformation(transform, matrix(1, 0, 0, 1.0581841, -195.97237, -393.68061)); }
+
+  .glyph-main {
+    @include cbCSSTransformation(transform, translate(-124.9887px, -685.13414px));
+    > g { @include cbCSSTransformation(transform, matrix(1.0042942, 0, 0, 1.0049899, -1269.9646, 728.76886)); }
   }
-  
   .g1 path:first-child {
-    opacity: 1;
-    fill: #0A82BE;
-    fill-opacity: 1;
-    fill-rule: nonzero;
-    stroke: none;
-    stroke-width: 7.5;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    stroke-miterlimit: 4;
-    stroke-dasharray: none;
-    stroke-dashoffset: 0;
-    stroke-opacity: 1;
+    @include cbCSSTransformation(transition, fill 0.3s ease-in-out);
+    @include svg(none, 7.5, 1, $content-light);
   }
-  .g1 path:last-child {
-    opacity:1;
-    fill: #000;
-    fill-opacity: 0.16161619;
-    fill-rule: nonzero;
-    stroke: none;
-    stroke-width: 7.5;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    stroke-miterlimit: 4;
-    stroke-dasharray: none;
-    stroke-dashoffset: 0;
-    stroke-opacity: 1;
-  }
-
+  .g1 path:last-child { @include svg(none, 7.5, 1, #000, 0.16161619); }
   .g2 path:first-child {
-    opacity:1;
-    fill: #E9E9E9;
-    fill-opacity: 1;
-    fill-rule: nonzero;
-    stroke: none;
-    stroke-width: 2;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    stroke-miterlimit: 4;
-    stroke-dasharray: none;
-    stroke-dashoffset: 0;
-    stroke-opacity: 0.7676768;
+    @include svg(none, 2, 0.7676768, #E9E9E9);
+    @include cbCSSTransformation(transform, matrix(1.9621585, 0, 0, 1.9999006, 1430.5884, -501.93632));
   }
-  .g2 path:last-child {
-    fill: #FFF;
-    fill-opacity: 1;
-    fill-rule: evenodd;
-    stroke: #979797;
-    stroke-width: 7.46534538;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    stroke-miterlimit: 4;
-    stroke-dasharray: none;
-    stroke-opacity: 1;
-  }
+  .g2 path:last-child { @include svg(#979797, 7.5, 1, #FFF, 1, evenodd); }
+  &:hover .g1 path:first-child { fill: $linkedIn-blue; }
 }
-
-
-
-
 
