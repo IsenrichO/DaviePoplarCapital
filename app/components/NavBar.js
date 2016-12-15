@@ -3,52 +3,56 @@ import React, { Component } from 'react';
 import { Link } from 'react-router';
 
 
-// Control of sidebar navigation menu display and behavior:
-const toggleNav = () => {
-  let nav = document.getElementById('nav-links-wrapper'),
-      glyph = document.getElementById('hamburger-icon');
-
-  // Function 'active' induces active sidebar menu display state:
-  function active() {
-    nav.className = 'active';
-    // nav.style.display = 'block';
-    glyph.style.color = 'White';
-    glyph.style.transform = 'rotate(90deg)';
-  }
-
-  // Function 'inactive' induces inactive sidebar menu display state:
-  function inactive() {
-    nav.className = 'inactive';
-    // nav.style.display = 'none';
-    glyph.style.color = 'rgb(79, 152, 201)';
-    glyph.style.transform = 'rotate(0deg)';
-  }
-
-  // Ternary conditional to change or revert based on present state of navigation menu sidebar:
-  nav.style.display !== 'block' ? active() : inactive();
-
-  // Event listener controls automated closure of navigation menu sidebar on outside click event:
-  window.addEventListener('mouseup', function(evt) {
-    if (evt.target != nav && evt.target.parentNode != nav && evt.target !== glyph) {
-      inactive();
-    }
-  });
-};
-
-
 export default class NavBar extends Component {
   constructor(props) {
     super(props);
+    this.activate = this.activate.bind(this);
+    this.deactivate = this.deactivate.bind(this);
+    this.executeNavAction = this.executeNavAction.bind(this);
   }
-  
+
+  // Function `activate` induces active sidebar menu display state:
+  activate(glyph, nav) {
+    nav.classList.toggle('active');
+    glyph.style.color = '#FFF';
+    glyph.style.transform = 'rotate(90deg)';
+  }
+
+  // Function `deactivate` induces inactive sidebar menu display state:
+  deactivate(glyph, nav) {
+    nav.classList.toggle('active');
+    glyph.style.color = '#4F98C9';
+    glyph.style.transform = 'rotate(0deg)';
+  }
+
+  // Control of sidebar navigation menu display and behavior:
+  executeNavAction(evt, glyph, nav) {
+    (nav.classList.contains('active') && evt.target != nav && evt.target.parentNode != nav)
+    || (nav.classList.contains('active') && evt.target == glyph)
+      ? this.deactivate(glyph, nav) : evt.target === glyph
+      ? this.activate(glyph, nav)
+      : null;
+  }
+
+  componentDidMount() {
+    const [self, { toggleBtn: glyph, navWrapper: nav }] = [this, this.refs];
+
+    // Event listener controls automated closure of navigation menu sidebar on outside click event:
+    window.addEventListener('mouseup', (evt) => { self.executeNavAction(evt, glyph, nav); }); 
+  }
+
   render() {
     return (
       <div id="nav-bar">
         <span
           id="hamburger-icon"
-          onClick={ toggleNav }
-          data-charRef="HTML Character, Heaven Trigram (a.k.a. the 'hamburger' icon): ☰">&#9776;</span>
-        <div id="nav-links-wrapper">
+          ref="toggleBtn"
+          data-charRef="HTML Character, Heaven Trigram (a.k.a. the 'hamburger' icon): ☰">
+          &#9776;
+        </span>
+        <div
+          id="nav-links-wrapper"
+          ref="navWrapper">
           <nav id="inter-pageNavBar">
             <Link to="/">Home</Link>
             <Link to="about">About</Link>
