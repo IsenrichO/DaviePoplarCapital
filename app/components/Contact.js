@@ -5,29 +5,31 @@ import GMap from './GMap';
 
 
 const Contact = () => (
-  <div className="flexbox-col">
+  <div className="flexbox-col contact">
     <div className="center-cont">
       <h3>Please contact us to discuss investment opportunities</h3>
-      <div style={{ background: '#FFF', width: '100%', height: '175px' }}>
+      <div className="wrapper" style={{ background: '#FFF', width: '100%', height: '175px' }}>
         <div className="flex-contact">
-          <p>
-            {[
-              <i key={ `FAIcon_User` } className="fa fa-user-circle" />,
-              `Ralph Isenrich, CFA`
-            ]}
-          </p>
-          <p>
-            {[
-              <i key={ `FAIcon_Envelope` } className="fa fa-envelope" />,
-              `ralph@daviepoplarcapital.com`
-            ]}
-          </p>
-          <p>
-            {[
-              <i key={ `FAIcon_Phone` } className="fa fa-phone-square" />,
-              `(m) +1 (919) 334-8367`
-            ]}
-          </p>
+          <div className="info">
+            <p>
+              {[
+                <i key={ `FAIcon_User` } className="fa fa-user-circle" />,
+                `Ralph Isenrich, CFA`
+              ]}
+            </p>
+            <p>
+              {[
+                <i key={ `FAIcon_Envelope` } className="fa fa-envelope" />,
+                `ralph@daviepoplarcapital.com`
+              ]}
+            </p>
+            <p>
+              {[
+                <i key={ `FAIcon_Phone` } className="fa fa-phone-square" />,
+                `(m) +1 (919) 334-8367`
+              ]}
+            </p>
+          </div>
           <a
             className="primary-btn"
             href="Resources/Ralph Isenrich CFA.vcf"
@@ -38,10 +40,13 @@ const Contact = () => (
             ]}
           </a>
         </div>
+
         <div className="flex-contact">
-          <p>Davie Poplar Capital, LLC.</p>
-          <p>185 Windchime Ct., Suite 201</p>
-          <p>Raleigh, NC 27615</p>
+          <div className="info">
+            <p>Davie Poplar Capital, LLC.</p>
+            <p>185 Windchime Ct., Suite 201</p>
+            <p>Raleigh, NC 27615</p>
+          </div>
           <a
             className="primary-btn"
             href="http://eepurl.com/_30or"
