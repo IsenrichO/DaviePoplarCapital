@@ -2,6 +2,7 @@
 import React from 'react';
 
 import GMap from './GMap';
+// import vCard from '../../public/resources/Ralph Isenrich CFA.vcf';
 
 
 const Contact = () => (
@@ -32,7 +33,8 @@ const Contact = () => (
           </div>
           <a
             className="primary-btn"
-            href="Resources/Ralph Isenrich CFA.vcf"
+            href="../../public/resources/Ralph Isenrich CFA.vcf"
+            // href={ vCard }
             download="Ralph Isenrich, CFA">
             {[
               <i key={ `FAIcon_AddressCard` } className="fa fa-address-card invert" />,
