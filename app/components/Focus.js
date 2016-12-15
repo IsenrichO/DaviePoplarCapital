@@ -9,15 +9,15 @@ const renderParameters = (params) => params.map((param, index, list) =>
       ),
       renderSections = (data) => data.map((datum, index, list) => 
         <div className="third" key={ `DIV_id${index}` }>
-          <h2>{ datum.sector }</h2>
+          <h4 className="sector">{ datum.sector }</h4>
           <ul>{ renderParameters(datum.parameters) }</ul>
         </div>
       );
 
 const Focus = () => (
-  <div className="center-cont">
+  <div className="center-cont focus">
     <h3>DPC invests in businesses within the following parameters</h3>
-    <div style={{ paddingBottom: '25px' }}>
+    <div className="info">
       { renderSections(BusinessFocusData) }
     </div>
   </div>

@@ -7,7 +7,7 @@ import Footer from './Footer';
 
 
 const Home = () => (
-  <div className="center-cont">
+  <div className="center-cont home">
     <Link to="about">
       <DPCLogo />
     </Link>
