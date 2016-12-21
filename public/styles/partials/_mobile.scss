@@ -1,0 +1,72 @@
+
+// Mobile Styles:
+// --------------------------
+@media only screen
+and (max-device-width: 700px) {
+  html { font-size: 10px; }
+  body {
+    height: auto;
+    min-height: 100vh;
+    overflow-y: scroll;
+  }
+
+  .center-cont.about,
+  .center-cont.focus,
+  .center-cont.contact {
+    width: 75%;
+  }
+
+  .social-share {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  main.about,
+  main.focus,
+  main.contact {
+    position: relative;
+    height: auto;
+    min-height: 93vh;
+    margin-top: 12.5vh;
+  }
+
+  .focus {
+    .info {
+      @include flex(flex, column, space-around, flex-start);
+    }
+    .third {
+      width: 100% !important;
+    }
+    ul { padding-left: 5rem; }
+  }
+
+  .contact {
+    .center-cont {
+      width: 85%;
+    }
+    .wrapper {
+      @include flex(flex, column);
+      height: auto !important;
+
+      > div:first-child { border: none; }
+      .flex-contact,
+      .primary-btn { width: 85%; }
+    }
+  }
+
+  #maps-container {
+    width: 85vw;
+    height: 30vh;
+
+    > div { width: inherit !important; }
+  }
+
+  footer {
+    position: relative;
+    display: block;
+    bottom: 0;
+    overflow: hidden;
+  }
+
+}
