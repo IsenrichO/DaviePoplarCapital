@@ -1,19 +1,21 @@
 
+// Navigation sidebar styles
+// --------------------------
 #nav-links-wrapper {
   position: fixed;
   width: 0;
   height: 100vh;
   background: $theme-primary-op;
-  font: 200 2rem/1.428571rem 'Open Sans', sans-serif;
+  font: 300 2rem/1.428571rem 'Open Sans', sans-serif;
   overflow: hidden;
-  z-index: 1000;
+  z-index: 8;
 
   &.active { @include cbCSSTransformation(animation, sideExpand 0.35s ease-out forwards); }
   &.inactive { @include cbCSSTransformation(animation, sideCollapse 0.35s ease-out forwards); }
 }
 
 #hamburger-icon {
-  @include cbCSSTransformation(transition, transform 0.35s ease-out);
+  @include cbCSSTransformation(transition, all 0.35s ease-out);
   position: fixed;
   display: block;
   left: 1%;
@@ -21,49 +23,36 @@
   color: $theme-primary;
   font: 3.5rem/1 'Open Sans', sans-serif;
   cursor: pointer;
-  z-index: 1100;
+  z-index: 10;
 }
 
-#inter-pageNavBar {
-  display: block;
-  position: absolute;
-  width: 100%;
-  left: 0;
+#nav-links {
+  position: relative;
   top: 17.5%;
-  text-align: left;
-  height: auto;
   
   > a {
     @include cbCSSTransformation(transition, padding-left 0.35s 0.1s ease-out);
-    position: relative; 
     display: block;
     width: 100%;
     padding: 1.785714rem 0;
-    color: #FFF;
+    color: $theme-white;
     font-variant: small-caps;
+    font-weight: 400;
     text-indent: 1.5rem;
     box-sizing: content-box;
     
     &:hover {
       padding-left: 10%;
-      text-shadow: 0 0 0.357143rem #FFF;
-      background: #FFF;
+      background-color: $theme-white;
       color: $theme-primary;
     }
   }
 }
 
-#nav_Logo {
-  display: block;
-  position: relative;
-  width: 100%;
-  height: auto;
-  bottom: 1%;
-  margin: 0 auto;
-}
 
-.info { background-color: #FFF; }
-
+// Main content styles
+// --------------------------
+.info { background-color: $theme-white; }
 .contact {
   &.flexbox-col {
     @include flex(flex, column, center);
@@ -102,7 +91,7 @@
     width: 90%;
     text-align: center;
     display: block;
-    color: #FFF;
+    color: $theme-white;
     font: 1.428571rem/1.428571 'Trebuchet MS', 'Wire One', sans-serif;
     padding: 1.071429rem 0;
     margin: 1.428571rem auto;
@@ -146,7 +135,7 @@
   > h3 {
     background-color: $theme-primary-op;
     text-align: center;
-    color: #FFF;
+    color: $theme-white;
     font: 1.571429rem/1 'Open Sans', 'Trebuchet MS', sans-serif;
     padding: 2.5rem 0;
     margin: 0;
@@ -176,7 +165,7 @@
 }
 
 .primary-btn {
-  @include cbCSSTransformation(transition, background 0.35s ease-out, color 0.35s ease-out);
+  @include cbCSSTransformation(transition, all 0.35s 0.1s ease-out);
   @extend %boxShadow;
   display: block;
   width: 70%;
@@ -184,20 +173,24 @@
   padding: 0.892857rem 0;
   background: $theme-primary;
   font: 1rem/1.428571rem 'Trebuchet MS', sans-serif; 
-  color: #FFF; 
+  color: $theme-white; 
   white-space: nowrap;
-  
+
+  > i { @include cbCSSTransformation(transition, all 0.35s 0.1s ease-out); }  
   &:hover {
     @extend %boxShadowHover;
-    background: #FFF;
-    color: $theme-primary
+    background: $theme-white;
+    color: $theme-primary;
+
+    > i { color: $theme-primary; }
   }
 }
 
 .footer {
   p {
+    margin: 0 auto;
     color: $content-primary;
-    font: 1.25rem/2 'Trebuchet MS', sans-serif;
+    font: 1rem/7vh 'Trebuchet MS', sans-serif;
     text-align: center;
   }
   > div {
@@ -214,7 +207,8 @@
 }
 
 
-// Google Maps JavaScript API Styles:
+// Google Maps JavaScript API Styles
+// --------------------------
 #maps-container {
   position: relative;
   display: block;
@@ -241,13 +235,13 @@
 }
 
 
-// Font Awesome (`.fa`) Styles:
+// Font Awesome (`.fa`) Styles
+// --------------------------
 .fa {
   display: inline !important;
   margin-right: 0.75rem;
   color: $theme-primary; // #4F98C9;
   font: 500 1.15rem/1.2 'FontAwesome' !important;
 
-  &.invert { color: #FFF; }
+  &.invert { color: $theme-white; }
 }
-a:hover .fa.invert { color: $theme-primary; }
