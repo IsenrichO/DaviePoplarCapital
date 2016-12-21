@@ -20,10 +20,11 @@ module.exports = {
       }, {
         test: /\.scss$/i,
         loaders: [
-          'style',
-          'css',
-          'autoprefixer?browsers=last 3 versions',
-          'sass?outputStyle=expanded'
+          'style-loader',
+          'css-loader',
+          'postcss-loader',
+          'sass-loader?outputStyle=expanded'
+          // 'autoprefixer?browsers=last 3 versions',
         ]
       }, { 
         test: /\.json$/i, 
@@ -32,8 +33,10 @@ module.exports = {
         test: /\.(pdf|vcf|docx?)$/i,
         loader: 'file-loader?name=/resources/[name].[ext]'
       }, {
-        test: /\.(jpe?g|png|gif|svg)$/i,
-        loader: 'file-loader?name=/images/[name].[ext]'
+        // test: /\.(jpe?g|png|gif|svg|woff2?|eot|ttf)(?.*$|$)?/i,
+        test: /\.(eot|woff|woff2|ttf|svg|png|jpe?g|gif)(\?\S*)?$/i,
+        loader: 'url?limit=100000&name=[name].[ext]'
+        // loader: 'file-loader?name=/images/[name].[ext]'
       }
     ]
   },
