@@ -2,8 +2,12 @@
 // DPC Logo
 // --------------------------
 .DPC-logo {
-  width: 570px;
-  height: 275px;
+  width: 30rem;
+  // width: 40.714286rem;
+  // width: 570px;
+  height: 15rem;
+  // height: 19.642857rem;
+  // height: 275px;
   background-color: $theme-primary-op;
   letter-spacing: 3px;
 
@@ -12,7 +16,7 @@
     text-align: center;
     fill: $theme-white;
 
-    &[data-section='logo-head'] { font: bold 100px/110px Georgia, sans-serif; }
+    &[data-section='logo-head'] { font: bold 7.142857rem/7.857143rem Georgia, sans-serif; }
     &[data-section='logo-sub'] {
       font: small-caps lighter 35px/35px Georgia, sans-serif;
       stroke: none;
