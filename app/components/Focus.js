@@ -4,6 +4,7 @@ import React from 'react';
 import BusinessFocusData from '../constants/json/BusinessFocusData.json';
 
 
+// Utility function maps JSON data into series of unordered list elements:
 const renderParameters = (params) => params.map((param, index, list) =>
         <li key={ `LI_id${index}` }>{ param }</li>
       ),
@@ -16,7 +17,7 @@ const renderParameters = (params) => params.map((param, index, list) =>
 
 const Focus = () => (
   <div className="center-cont focus">
-    <h3>DPC invests in businesses within the following parameters</h3>
+    <h3>DPC invests along the following parameters</h3>
     <div className="info">
       { renderSections(BusinessFocusData) }
     </div>
