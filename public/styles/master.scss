@@ -74,3 +74,4 @@ $FA: '../../node_modules/font-awesome/scss';
 @import './partials/main';        // Custom styles for classes
 @import './partials/svg';         // Styles for inline-rendered SVG elements
 @import './partials/keyframes';   // Styles for CSS animations based on keyframes CSS at-rule
+@import './partials/mobile';      // Styles for CSS mobile media queries
