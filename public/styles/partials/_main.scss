@@ -1,6 +1,11 @@
 
 // Navigation sidebar styles
 // --------------------------
+#nav-bar {
+  position: absolute;
+  top: 0;
+}
+
 #nav-links-wrapper {
   position: fixed;
   width: 0;
