@@ -76,7 +76,7 @@ export default class GMap extends Component {
           <h3>Davie Poplar Capital</h3>
           <hr />
           <p>185 Windchime Ct, Suite 201</p>
-          <p>Raleigh, NC 27615 US</p>
+          <p>Raleigh, NC 27615</p>
         </div>
       </InfoWindow>
     );
