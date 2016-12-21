@@ -15,7 +15,7 @@ const appendCopyright = () => {
 const Footer = () => (
   <footer className="footer">
     <p id="copyright_Par">{ appendCopyright() }</p>
-    <div>
+    <div className="social-share">
       <a
         className="footer_linkedInCont footer_SocialShare"
         href="https://www.linkedin.com/in/isenrichr"
