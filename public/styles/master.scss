@@ -1,16 +1,24 @@
 
-// Sass $variable Declarations:
+// Sass $variable Declarations
+// --------------------------
 $theme-primary: #4F98C9;
 $theme-primary-op: rgba(79, 152, 201, 0.8);
+$theme-white: #FFF;
+$theme-black: #000;
+$theme-gray: #626262;
 $content-primary: #626262;
 $content-light: #C0C0C0;
 $content-dark: #202020;
+$content-error: #D94242;
 $font-headings: 22px/22px 'Open Sans', 'Trebuchet MS', sans-serif;
 $font-body: 1rem/24px 'Open Sans', sans-serif;
+$svg-bckg: #E9E9E9;
 $linkedIn-blue: #0A82BE;
+$FA: '../../node_modules/font-awesome/scss';
 
 
-// Sass @mixin Declarations:
+// Sass @mixin Declarations
+// --------------------------
 @mixin flex($flex: flex, $flexDir: row, $justification: space-around, $flexAlign: center) {
   display: $flex;
   flex-flow: $flexDir nowrap;
@@ -26,7 +34,7 @@ $linkedIn-blue: #0A82BE;
           #{$transform}: $transformProps;
 }
 
-@mixin svg($str: none, $strWidth: 7.5, $strOp: 1, $fill: #FFF, $fillOp: 1, $fillRule: nonzero) {
+@mixin svg($str: none, $strWidth: 7.5, $strOp: 1, $fill: $theme-white, $fillOp: 1, $fillRule: nonzero) {
   fill: $fill;
   fill-rule: nonzero;
   fill-opacity: $fillOp;
@@ -42,20 +50,26 @@ $linkedIn-blue: #0A82BE;
 };
 
 
-// Sass %placeholder Declarations:
+// Sass %placeholder Declarations
+// --------------------------
 %boxShadow {
   -webkit-box-shadow: 1px 1px 5px 0.5px #808080;
      -moz-box-shadow: 1px 1px 5px 0.5px #808080;
           box-shadow: 1px 1px 5px 0.5px #808080;
 }
 %boxShadowHover {
-  -webkit-box-shadow: 0 11px 13px 0.5px #B3B3B3;
-     -moz-box-shadow: 0 11px 13px 0.5px #B3B3B3;
-          box-shadow: 0 11px 13px 0.5px #B3B3B3;
+  -webkit-box-shadow: 0 8px 13px 0.5px #B3B3B3,
+                      -4px -2px 14px 2px #B3B3B3;
+     -moz-box-shadow: 0 8px 13px 0.5px #B3B3B3,
+                      -4px -2px 14px 2px #B3B3B3;
+          box-shadow: 0 8px 13px 0.5px #B3B3B3,
+                      -4px -2px 14px 2px #B3B3B3;
 }
 
 
-// Import Sass Partials:
+// Import Sass Partials
+// --------------------------
+// @import '../../node_modules/font-awesome/scss/font-awesome';  // Font-Awesome NPM module import
 @import './partials/global';      // Styles for base-level HTML tags sans any selectors
 @import './partials/main';        // Custom styles for classes
 @import './partials/svg';         // Styles for inline-rendered SVG elements
