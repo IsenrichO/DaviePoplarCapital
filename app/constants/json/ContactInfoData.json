@@ -1,0 +1,15 @@
+[
+  {
+    "type": "name",
+    "value": "Ralph Isenrich, CFA",
+    "scheme": null
+  }, {
+    "type": "email",
+    "value": "ralph@daviepoplarcapital.com",
+    "scheme": "mailto:ralph@daviepoplarcapital.com"
+  }, {
+    "type": "phone",
+    "value": "(m) +1 (919) 334-8367",
+    "scheme": "tel:19193348367"
+  }
+]
