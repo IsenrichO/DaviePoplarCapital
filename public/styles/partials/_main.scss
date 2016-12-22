@@ -5,7 +5,6 @@
   position: absolute;
   top: 0;
 }
-
 #nav-links-wrapper {
   position: fixed;
   width: 0;
@@ -57,27 +56,6 @@
 
 // Main content styles
 // --------------------------
-.info { background-color: $theme-white; }
-.contact {
-  &.flexbox-col {
-    @include flex(flex, column, center);
-    height: inherit;
-    > div { margin: 5vh 0; }
-  }
-  .info {
-    @include flex(flex, column, space-around, flex-start);
-    p { margin: 0.25rem 0; }
-  }
-  .flex-contact {
-    @include flex(inline-flex, column);
-    position: relative;
-    width: 50%;
-    height: 94%;
-    top: 3%;
-    &:first-child { border-right: 1px solid $content-light; }
-  }
-}
-
 .about {
   .info { padding-bottom: 5%; }
   p {
@@ -119,6 +97,37 @@
   }
 }
 
+.contact {
+  &.flexbox-col {
+    @include flex(flex, column, center);
+    height: inherit;
+    > div { margin: 5vh 0; }
+  }
+  .wrapper {
+    @include flex(flex, row, space-around, flex-start);
+    padding: 1rem 0;
+  }
+  .info {
+    @include flex(flex, column, space-around, flex-start);
+    padding-top: 0.5rem;
+    p {
+      margin: 0.25rem 0;
+      font: normal 1.15rem/1.2 'Open Sans', sans-serif;
+    }
+  }
+  .flex-contact {
+    @include flex(inline-flex, column);
+    position: relative;
+    width: 50%;
+    height: 94%;
+    top: 3%;
+    &:first-child { border-right: 1px solid $content-light; }
+  }
+}
+
+.about .info,
+.focus .info,
+.contact .wrapper { background-color: $theme-white; }
 .center-cont {
   position: relative;
   width: 675px; 
@@ -126,7 +135,6 @@
   text-align: center;
 
   svg:hover { box-shadow: 0 0 2px 0.5px rgba(255, 255, 255, 0.5); }
-
   > a {
     text-align: center;
     
@@ -136,16 +144,14 @@
       text-align: center;
     }
   }
-
   > h3 {
     background-color: $theme-primary-op;
     text-align: center;
     color: $theme-white;
-    font: 1.571429rem/1 'Open Sans', 'Trebuchet MS', sans-serif;
+    font: 1.571429rem/1.571429rem 'Open Sans', 'Trebuchet MS', sans-serif;
     padding: 2.5rem 0;
     margin: 0;
   }
-
   > div {
     > div.contact_Info {
       display: inline-block;
@@ -192,14 +198,15 @@
 }
 
 .footer {
+  @include flex(flex, row, space-between);
   p {
-    margin: 0 auto;
-    color: $content-primary;
-    font: 1rem/7vh 'Trebuchet MS', sans-serif;
+    width: 100%;
+    color: #626262;
+    font: 1rem Trebuchet MS,sans-serif;
     text-align: center;
   }
-  > div {
-    @include flex(flex, row);
+  .social-share {
+    @include flex(inline-flex, row);
     position: absolute;
     width: 15%;
     min-width: 8.928571rem;

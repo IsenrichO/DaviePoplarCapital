@@ -1,15 +1,14 @@
 
-// DPC Logo
+// Inline SVG Styles
 // --------------------------
+
+
+// DPC Logo:
 .DPC-logo {
-  width: 30rem;
-  // width: 40.714286rem;
-  // width: 570px;
-  height: 15rem;
-  // height: 19.642857rem;
-  // height: 275px;
+  width: 570px;
+  height: 275px;
   background-color: $theme-primary-op;
-  letter-spacing: 3px;
+  letter-spacing: 0.214286rem;
 
   text {
     text-anchor: middle;
@@ -18,7 +17,7 @@
 
     &[data-section='logo-head'] { font: bold 7.142857rem/7.857143rem Georgia, sans-serif; }
     &[data-section='logo-sub'] {
-      font: small-caps lighter 35px/35px Georgia, sans-serif;
+      font: small-caps lighter 2.5rem/2.5rem Georgia, sans-serif;
       stroke: none;
     }
   }
@@ -26,12 +25,11 @@
 }
 
 
-// LinkedIn Logo
-// --------------------------
+// LinkedIn Logo:
 .linkedIn-logo {
   circle {
     @include cbCSSTransformation(transition, fill 0.3s ease-in-out);
-    fill: $svg-bckg;
+    fill: $theme-primary;
     cx: 13.5px;
     cy: 13.5px;
     r: 13.5px;
@@ -45,8 +43,7 @@
 }
 
 
-// Email Glyph Icon
-// --------------------------
+// Email Glyph Icon:
 .email-glyph {
   rect {
     @include svg(none, 2, 0.7676768, none, 0.63157893);
@@ -68,7 +65,7 @@
   }
   .g1 path:first-child {
     @include cbCSSTransformation(transition, fill 0.3s ease-in-out);
-    @include svg(none, 7.5, 1, $content-light);
+    @include svg(none, 7.5, 1, $theme-primary);
   }
   .g1 path:last-child { @include svg(none, 7.5, 1, $theme-black, 0.16161619); }
   .g2 path:first-child {

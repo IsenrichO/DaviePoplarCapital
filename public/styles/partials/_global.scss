@@ -1,9 +1,4 @@
 
-// Sass Variable Declarations
-// --------------------------
-$PUBLIC_BASE: 'http://www.daviepoplarcapital.com/public/';
-
-
 // Styles
 // --------------------------
 * {
@@ -21,11 +16,11 @@ html {
 }
 
 body {
+  @include mobileMedia();
   width: 100vw;
   height: 100vh;
   margin: 0;
   padding: 0;
-  background: $content-dark url('#{$PUBLIC_BASE}images/Site_bg.jpeg') no-repeat fixed top left / cover;
   overflow: hidden;
 }
 
