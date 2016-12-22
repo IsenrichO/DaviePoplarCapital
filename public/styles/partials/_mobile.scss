@@ -1,0 +1,61 @@
+
+// Mobile Styles
+// --------------------------
+@media only screen
+and (max-device-width: 700px) {
+  html { font-size: 10px; }
+  body {
+    @include mobileMedia(mobile, 2500);
+    height: auto;
+    min-height: 100vh;
+    overflow-y: scroll;
+  }
+  .center-cont.about,
+  .center-cont.focus,
+  .contact .center-cont,
+  #maps-container { width: 80vw; }
+  main.about,
+  main.focus,
+  main.contact {
+    position: relative;
+    height: auto;
+    min-height: 93vh;
+    margin-top: 15vh;
+  }
+  .focus {
+    .info { @include flex(flex, column, space-around, flex-start); }
+    ul { padding-left: 5rem; }
+  }
+  .contact .wrapper {
+    @include flex(flex, column);
+    > div:first-child { border: none; }
+    .primary-btn { width: 85%; }
+  }
+  .focus .info,
+  .contact .wrapper { background-color: transparent; }
+  .third,
+  .contact .flex-contact {
+    width: 100% !important;
+    margin: 1rem auto;
+    background-color: $theme-white;
+  }
+  
+  footer {
+    position: relative;
+    overflow: hidden;
+    p {
+      width: 65% !important;
+      margin-left: 7.5%;
+    }
+    .social-share {
+      position: relative !important;
+      max-width: 15vw !important;
+      > a { width: 3.5vh !important; }
+    }
+  }
+  .DPC-logo {
+    width: 90vw;
+    max-width: 380px;
+    height: 15rem;
+  }
+}

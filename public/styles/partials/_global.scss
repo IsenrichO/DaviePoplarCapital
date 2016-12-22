@@ -1,27 +1,34 @@
 
-// Sass Variable Declarations:
-$PUBLIC_BASE: 'http://www.daviepoplarcapital.com/public/';
-
-
-// Styles:
+// Styles
+// --------------------------
 * {
-  -webkit-font-smoothing: antialiased;
   -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  -webkit-locale: 'en';
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
 
-html { font-size: 14px; }
+html {
+  font-size: 14px;
+  overflow-x: hidden;
+}
 
 body {
+  @include mobileMedia();
   width: 100vw;
   height: 100vh;
   margin: 0;
   padding: 0;
-  background: #FFF url('#{$PUBLIC_BASE}images/Site_bg.jpeg') no-repeat fixed top left / cover;
-  // background: #FFF url(../images/Site_bg.jpeg) no-repeat fixed top left / cover;
   overflow: hidden;
+}
+
+noscript {
+  width: 50%;
+  height: auto;
+  font: 1.428571rem/1.428571 Roboto, 'Helvetica Neue', sans-serif;
+  color: $content-error;
 }
 
 main {
@@ -36,6 +43,15 @@ main {
   align-items: center;
 }
 
+h3 {
+  margin: 0;
+  padding: 2.5rem 0;
+  text-align: center;
+  color: $theme-white;
+  background-color: $theme-primary-op;
+  font: 1.571429rem/1.571429rem 'Open Sans', 'Trebuchet MS', sans-serif;
+}
+
 a,
 a:visited,
 a:focus,
@@ -48,6 +64,6 @@ footer {
   height: 7vh;
   left: 0;
   bottom: 0;
-  background: #202020;
-  z-index: 1005;
+  background-color: $content-dark;
+  z-index: 20;
 }

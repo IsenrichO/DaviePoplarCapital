@@ -1,6 +1,7 @@
 
 
 // DECLARATION OF SITE ANIMATION KEYFRAMES
+// --------------------------
 
 
 // Left navigation sidebar growth animation:
@@ -13,7 +14,7 @@
   }
   100% {
     width: 20vw;
-    min-width: 250px;
+    min-width: 15rem;
     opacity: 1;
     visibility: visible;
     overflow: visible;
@@ -28,7 +29,7 @@
   }
   100% {
     width: 20vw;
-    min-width: 250px;
+    min-width: 15rem;
     opacity: 1;
     visibility: visible;
     overflow: visible;
@@ -43,7 +44,7 @@
   }
   100% {
     width: 20vw;
-    min-width: 250px;
+    min-width: 15rem;
     opacity: 1;
     visibility: visible;
     overflow: visible;
@@ -58,7 +59,7 @@
   }
   100% {
     width: 20vw;
-    min-width: 250px;
+    min-width: 15rem;
     opacity: 1;
     visibility: visible;
     overflow: visible;
@@ -70,7 +71,7 @@
 @-webkit-keyframes sideCollapse {
   from {
     width: 20vw;
-    min-width: 250px;
+    min-width: 15rem;
     overflow: visible;
   }
   to {
@@ -81,7 +82,7 @@
 @-moz-keyframes sideCollapse {
   from {
     width: 20vw;
-    min-width: 250px;
+    min-width: 15rem;
     overflow: visible;
   }
   to {
@@ -92,7 +93,7 @@
 @-o-keyframes sideCollapse {
   from {
     width: 20vw;
-    min-width: 250px;
+    min-width: 15rem;
     overflow: visible;
   }
   to {
@@ -103,7 +104,7 @@
 @keyframes sideCollapse {
   from {
     width: 20vw;
-    min-width: 250px;
+    min-width: 15rem;
     overflow: visible;
   }
   to {
