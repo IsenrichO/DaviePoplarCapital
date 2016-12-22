@@ -5,7 +5,6 @@ $theme-primary: #4F98C9;
 $theme-primary-op: rgba(79, 152, 201, 0.8);
 $theme-white: #FFF;
 $theme-black: #000;
-$theme-gray: #626262;
 $content-primary: #626262;
 $content-light: #C0C0C0;
 $content-dark: #202020;
@@ -14,6 +13,9 @@ $font-headings: 22px/22px 'Open Sans', 'Trebuchet MS', sans-serif;
 $font-body: 1rem/24px 'Open Sans', sans-serif;
 $svg-bckg: #E9E9E9;
 $linkedIn-blue: #0A82BE;
+$PUBLIC_BASE: 'http://www.daviepoplarcapital.com/public/';
+$CLOUDINARY_BASE: 'https://res.cloudinary.com/http-isenrich-io/image/upload/';
+$Bckg-img: 'Site_bg-min.jpg';
 $FA: '../../node_modules/font-awesome/scss';
 
 
@@ -49,6 +51,12 @@ $FA: '../../node_modules/font-awesome/scss';
   opacity: 1;
 };
 
+@mixin mobileMedia($medium: screen, $imgWidth: 6000) {
+  $pos: top left;
+  @if $medium == mobile { $pos: center; }
+  background: $content-dark url('#{$CLOUDINARY_BASE}w_#{$imgWidth}/#{$Bckg-img}') no-repeat $pos / cover;
+}
+
 
 // Sass %placeholder Declarations
 // --------------------------
@@ -69,9 +77,9 @@ $FA: '../../node_modules/font-awesome/scss';
 
 // Import Sass Partials
 // --------------------------
-// @import '../../node_modules/font-awesome/scss/font-awesome';  // Font-Awesome NPM module import
 @import './partials/global';      // Styles for base-level HTML tags sans any selectors
 @import './partials/main';        // Custom styles for classes
 @import './partials/svg';         // Styles for inline-rendered SVG elements
 @import './partials/keyframes';   // Styles for CSS animations based on keyframes CSS at-rule
 @import './partials/mobile';      // Styles for CSS mobile media queries
+// @import '../../node_modules/font-awesome/scss/font-awesome';  // Font-Awesome NPM module import
