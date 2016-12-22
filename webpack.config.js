@@ -4,10 +4,10 @@ const path = require('path');
 
 module.exports = {
   entry: [
-    path.join(__dirname, 'app/Main.js')
+    path.join(__dirname, 'app/Main.jsx')
   ],
   output: {
-    path: path.join(__dirname, 'public/js'),
+    path: path.join(__dirname, 'public/dist'),
     filename: 'bundle.js'
     // publicPath: 'http://www.daviepoplarcapital.com/'
   },
@@ -31,9 +31,9 @@ module.exports = {
         loader: 'json'
       }, {
         test: /\.(pdf|vcf|docx?)$/i,
-        loader: 'file-loader?name=/resources/[name].[ext]'
+        loader: 'file-loader?name=[name].[ext]&publicPath=public/resources/&outputPath=public/dist/'
+        // loader: 'file-loader?name=/resources/[name].[ext]'
       }, {
-        // test: /\.(jpe?g|png|gif|svg|woff2?|eot|ttf)(?.*$|$)?/i,
         test: /\.(eot|woff|woff2|ttf|svg|png|jpe?g|gif)(\?\S*)?$/i,
         loader: 'url?limit=100000&name=[name].[ext]'
         // loader: 'file-loader?name=/images/[name].[ext]'
@@ -67,46 +67,3 @@ module.exports = {
     extensions: ['', '.js', '.jsx']
   }
 };
-
-
-/*
-module.exports = {
-  devtool: 'cheap-eval-source-map',
-  entry: [
-    path.join(__dirname, './app/app.js')
-    // path.join(__dirname, './app/app.js')
-  ],
-  output: {
-    path: path.join(__dirname, 'public'),
-    filename: './js/bundle.js',
-    publicPath: 'http://www.daviepoplarcapital.com/'
-    // sourceMapFilename: "public/js/bundle.map"
-  },
-  module: {
-    loaders: [
-      {
-        test: /\.jsx?$/i,
-        exclude: /node_modules/,
-        loaders: ['babel']
-      }
-      // , {
-      //   test: /\.(jpe?g|png|gif|svg)$/i,
-      //   loader: 'file-loader?name=/images/[name].[ext]'
-      // }, {
-      //   test: /\.pdf/i,
-      //   loader: 'file-loader?name=/docs/[name].[ext]'
-      // }
-    ]
-  },
-  devServer: {
-    colors: true,
-    contentBase: __dirname,
-    noInfo: false,
-    hot: true,
-    inline: true,
-    port: 3000,
-    host: 'localhost'
-  },
-  plugins: []
-};
-*/
