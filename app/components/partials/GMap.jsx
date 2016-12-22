@@ -4,7 +4,7 @@ import { GoogleMapLoader, GoogleMap, Marker, InfoWindow } from 'react-google-map
 
 import GoogleMapStyles from '../../constants/json/GoogleMapStyles.json';
 import LocationInfo from '../../constants/json/LocationInfoData.json';
-import { INFO_MAP, renderContactInfo } from '../../Mixins';
+import { renderContactText } from '../../Mixins';
 
 
 export default class GMap extends Component {
@@ -19,6 +19,7 @@ export default class GMap extends Component {
     };
   }
 
+  // Produces custom-styled map marker pin atop DPC's geographical coordinates:
   addMarker() {
     const toggleInfoWindow = () => this.handleInfoWindowDisplayState();
     return (
@@ -48,7 +49,7 @@ export default class GMap extends Component {
         <div className="info-window">
           <h4>Davie Poplar Capital</h4>
           <hr />
-          { renderContactInfo(LocationInfo.slice(1)) }
+          { renderContactText(LocationInfo.slice(1)) }
         </div>
       </InfoWindow>
     );
