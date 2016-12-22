@@ -46,7 +46,7 @@ export default class GMap extends Component {
     return (
       <InfoWindow onCloseclick={ this.handleInfoWindowDisplayState } >
         <div className="info-window">
-          <h3>Davie Poplar Capital</h3>
+          <h4>Davie Poplar Capital</h4>
           <hr />
           { renderContactInfo(LocationInfo.slice(1)) }
         </div>
@@ -62,7 +62,10 @@ export default class GMap extends Component {
           <GoogleMap 
             defaultCenter={ this.state.DPC_Coords }
             defaultZoom={ 14 }
-            defaultOptions={{ styles: GoogleMapStyles }}
+            defaultOptions={{
+              styles: GoogleMapStyles,
+              mapTypeControl: false
+            }}
             onClick={ () => this.handleInfoWindowDisplayState(false) }>
             { this.addMarker() }
           </GoogleMap>
