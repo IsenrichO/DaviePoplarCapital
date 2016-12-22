@@ -4,7 +4,7 @@ import React from 'react';
 import GMap from './partials/GMap';
 import ContactInfo from '../constants/json/ContactInfoData.json';
 import LocationInfo from '../constants/json/LocationInfoData.json';
-import VCard from '../../public/resources/Ralph Isenrich, CFA.vcf';
+import VCard from '../../public/resources/Ralph Isenrich CFA.vcf';
 import { INFO_MAP, renderContactInfo } from '../Mixins';
 
 
