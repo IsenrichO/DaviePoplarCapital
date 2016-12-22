@@ -1,4 +1,38 @@
 
+
+// General heritable class styles
+// --------------------------
+.half { width: 50%; }
+.third {
+  width: 32.5%;
+  text-align: left;
+}
+.primary-btn {
+  @include cbCSSTransformation(transition, all 0.35s 0.1s ease-out);
+  @include fontStyle(normal, 1rem, 1.428571rem, $theme-white);
+  @extend %invert;
+  @extend %boxShadow;
+  display: block;
+  width: 70%;
+  margin: 1rem auto;
+  padding: 0.892857rem 0;
+  text-align: center;
+  white-space: nowrap;
+  > i { @include cbCSSTransformation(transition, all 0.35s 0.1s ease-out); }
+  &:hover {
+    @extend %invertHover;
+    @extend %boxShadowHover;
+    i { color: $theme-primary; }
+  }
+  // &:hover {
+  //   @extend %boxShadowHover;
+  //   background-color: $theme-white;
+  //   color: $theme-primary;
+  //   > i { color: $theme-primary; }
+  // }
+}
+
+
 // Navigation sidebar styles
 // --------------------------
 #nav-bar {
@@ -6,50 +40,41 @@
   top: 0;
 }
 #nav-links-wrapper {
+  @include fontStyle(300, 2rem, 1.428571rem, inherit, 'Open Sans', sans-serif);
   position: fixed;
   width: 0;
   height: 100vh;
   background: $theme-primary-op;
-  font: 300 2rem/1.428571rem 'Open Sans', sans-serif;
   overflow: hidden;
   z-index: 8;
-
   &.active { @include cbCSSTransformation(animation, sideExpand 0.35s ease-out forwards); }
   &.inactive { @include cbCSSTransformation(animation, sideCollapse 0.35s ease-out forwards); }
 }
-
 #hamburger-icon {
   @include cbCSSTransformation(transition, all 0.35s ease-out);
+  @include fontStyle(normal, 3.5rem, 1, $theme-primary);
   position: fixed;
-  display: block;
-  left: 1%;
-  top: 2%;
-  color: $theme-primary;
-  font: 3.5rem/1 'Open Sans', sans-serif;
+  margin: 2% 0 0 1%;
   text-shadow: 0 0 6px $theme-white;
   cursor: pointer;
   z-index: 10;
 }
-
 #nav-links {
   position: relative;
   top: 17.5%;
-  
   > a {
     @include cbCSSTransformation(transition, padding-left 0.35s 0.1s ease-out);
     display: block;
     width: 100%;
     padding: 1.785714rem 0;
     color: $theme-white;
-    font-variant: small-caps;
-    font-weight: 400;
     text-indent: 1.5rem;
     box-sizing: content-box;
-    
     &:hover {
       padding-left: 10%;
       background-color: $theme-white;
       color: $theme-primary;
+      i { color: $theme-primary;}
     }
   }
 }
@@ -57,73 +82,48 @@
 
 // Main content styles
 // --------------------------
+.home .center-cont { width: auto; }
+
 .about {
   .info { padding-bottom: 5%; }
   p {
+    @include fontStyle(normal, 1rem, 1.714286, $content-primary);
     width: 85%;
     margin: auto;
     padding-top: 5%;
     text-align: justify;
-    color: $content-primary;
-    font: 1rem/1.714286 'Open Sans', sans-serif;
   }
 }
 
 .focus {
   .sector {
+    @include fontStyle(normal, 1.428571rem, 1.428571, $theme-white, 'Trebuchet MS', 'Wire One', sans-serif)
     @extend %boxShadow;
     width: 90%;
     text-align: center;
-    display: block;
-    color: $theme-white;
-    font: 1.428571rem/1.428571 'Trebuchet MS', 'Wire One', sans-serif;
     padding: 1.071429rem 0;
     margin: 1.428571rem auto;
-    background: $theme-primary;
+    background-color: $theme-primary;
   }
   .info { @include flex(flex, row, space-around, flex-start); }
-  .third {
-    width: 32.5%;
-    text-align: left;
-  }
-  ul {
-    list-style-type: disc;
-    list-style-position: outside;
-    position: relative;
-    left: 0;
-    margin: 0;
-    padding-left: 2.5rem;
-    word-wrap: break-word;
-    li {
-      margin: 0.714286rem 0.714286rem 0.714286rem 0;
-      font: 1rem/1.714286 'Open Sans', sans-serif;
-      color: #626262;
-    }
-  }
 }
 
 .contact {
-  &.flexbox-col {
-    @include flex(flex, column, center);
-    height: inherit;
-    > div { margin: 5vh 0; }
-  }
-  .wrapper {
+  .center-cont { margin: 5vh 0; }
+  .wrapper,
+  .info {
     @include flex(flex, row, space-around, flex-start);
     padding: 1rem 0;
   }
-  .info {
-    @include flex(flex, column, space-around, flex-start);
-    padding-top: 0.5rem;
-    p {
-      margin: 0.25rem 0;
-      font: normal 1.15rem/1.2 'Open Sans', sans-serif;
-    }
+  &.flexbox-col,
+  .info { @include flex(flex, column, center, flex-start); }
+  .info p {
+    @include fontStyle(normal, 1.15rem, 1.2, $content-primary);
+    margin: 0.25rem 0;
   }
   .flex-contact {
     @include flex(inline-flex, column);
     position: relative;
-    width: 50%;
     height: 94%;
     top: 3%;
     &:first-child { border-right: 1px solid $content-light; }
@@ -133,65 +133,14 @@
 .about .info,
 .focus .info,
 .contact .wrapper { background-color: $theme-white; }
-.center-cont {
-  position: relative;
-  width: 675px; 
-  height: auto;
-  text-align: center;
-
-  svg:hover { box-shadow: 0 0 2px 0.5px rgba(255, 255, 255, 0.5); }
-  > a {
-    text-align: center;
-     > img {
-      width: 75%;
-      height: auto;
-      text-align: center;
-    }
-  }
-  > div {
-    > div.contact_Info {
-      display: inline-block;
-      position: relative;
-      width: 40%;
-      margin: 1.785714rem auto 0.3571429rem 5%;
-
-      p { width: 100%; }
-    }
-    div.contact_Btns {
-      margin: 0.714286rem auto 5% 0;
-      text-align: left;
-    }
-  }
-}
-
-.primary-btn {
-  @include cbCSSTransformation(transition, all 0.35s 0.1s ease-out);
-  @extend %boxShadow;
-  display: block;
-  width: 70%;
-  margin: 1rem auto;
-  padding: 0.892857rem 0;
-  background: $theme-primary;
-  font: 1rem/1.428571rem 'Trebuchet MS', sans-serif; 
-  color: $theme-white; 
-  white-space: nowrap;
-
-  > i { @include cbCSSTransformation(transition, all 0.35s 0.1s ease-out); }  
-  &:hover {
-    @extend %boxShadowHover;
-    background: $theme-white;
-    color: $theme-primary;
-
-    > i { color: $theme-primary; }
-  }
-}
+.center-cont,
+#maps-container { width: 675px; }
 
 .footer {
   @include flex(flex, row, space-between);
   p {
+    @include fontStyle(normal, inherit, inherit, $content-primary);
     width: 100%;
-    color: #626262;
-    font: 1rem Trebuchet MS,sans-serif;
     text-align: center;
   }
   .social-share {
@@ -202,7 +151,6 @@
     height: 100%;
     right: 0;
     top: 0;
-
     > a { width: calc(7vh * 0.6); }
   }
 }
@@ -211,27 +159,14 @@
 // Google Maps JavaScript API Styles
 // --------------------------
 #maps-container {
-  position: relative;
-  display: block;
-  width: 675px;
   height: 30vh;
   max-height: 250px;
-  margin: 0 auto;
 }
-
 .info-window {
-  h4 {
-    display: inline;
-    color: $theme-primary;
-    font-weight: bold;
-  }
+  h4 { display: inline; }
   p {
-    display: block;
-    width: 100%;
+    @include fontStyle(normal, 0.7rem, 1.5, $content-primary, 'Open Sans', sans-serif);
     margin: 0;
-    text-align: left;
-    text-indent: 0;
-    font: lighter 0.7rem/1.5 auto;
     overflow: hidden;
   }
 }
@@ -240,10 +175,8 @@
 // Font Awesome (`.fa`) Styles
 // --------------------------
 .fa {
+  @include fontStyle(500, 1.15rem, 1.2, $theme-primary, 'FontAwesome' !important);
   display: inline !important;
   margin-right: 0.75rem;
-  color: $theme-primary;
-  font: 500 1.15rem/1.2 'FontAwesome' !important;
-
   &.invert { color: $theme-white; }
 }
