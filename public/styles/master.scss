@@ -9,8 +9,7 @@ $content-primary: #626262;
 $content-light: #C0C0C0;
 $content-dark: #202020;
 $content-error: #D94242;
-$font-headings: 1.571428rem/1.571428rem 'Open Sans', 'Trebuchet MS', sans-serif;
-$font-body: 1rem/1.714286rem 'Open Sans', sans-serif;
+$font-chain: Trebuchet MS, Open Sans, sans-serif;
 $svg-bckg: #E9E9E9;
 $linkedIn-blue: #0A82BE;
 $PUBLIC_BASE: 'http://www.daviepoplarcapital.com/public/';
@@ -27,7 +26,6 @@ $FA: '../../node_modules/font-awesome/scss';
   justify-content: $justification;
   align-items: $flexAlign;
 };
-
 @mixin cbCSSTransformation($transform: transform, $transformProps...) {
   -webkit-#{$transform}: $transformProps;
      -moz-#{$transform}: $transformProps;
@@ -35,7 +33,6 @@ $FA: '../../node_modules/font-awesome/scss';
        -o-#{$transform}: $transformProps;
           #{$transform}: $transformProps;
 }
-
 @mixin svg($str: none, $strWidth: 7.5, $strOp: 1, $fill: $theme-white, $fillOp: 1, $fillRule: nonzero) {
   fill: $fill;
   fill-rule: nonzero;
@@ -50,7 +47,11 @@ $FA: '../../node_modules/font-awesome/scss';
   stroke-dashoffset: 0;
   opacity: 1;
 };
-
+@mixin fontStyle($weight: normal, $size: 1rem, $height: 1, $color: inherit, $face...) {
+  @if (length($face) == 0) { $face: $font-chain; }
+  font: unquote('#{$weight} #{$size}/#{$height} #{$face}');
+  color: $color;
+};
 @mixin mobileMedia($medium: screen, $imgWidth: 6000) {
   $pos: top left;
   @if $medium == mobile { $pos: center; }
@@ -60,11 +61,19 @@ $FA: '../../node_modules/font-awesome/scss';
 
 // Sass %placeholder Declarations
 // --------------------------
+%invert {
+  color: $theme-white !important;
+  background-color: $theme-primary !important;
+};
+%invertHover {
+  color: $theme-primary !important;
+  background-color: $theme-white !important;
+};
 %boxShadow {
   -webkit-box-shadow: 1px 1px 5px 0.5px #808080;
      -moz-box-shadow: 1px 1px 5px 0.5px #808080;
           box-shadow: 1px 1px 5px 0.5px #808080;
-}
+};
 %boxShadowHover {
   -webkit-box-shadow: 0 8px 13px 0.5px #B3B3B3,
                       -4px -2px 14px 2px #B3B3B3;
@@ -72,7 +81,7 @@ $FA: '../../node_modules/font-awesome/scss';
                       -4px -2px 14px 2px #B3B3B3;
           box-shadow: 0 8px 13px 0.5px #B3B3B3,
                       -4px -2px 14px 2px #B3B3B3;
-}
+};
 
 
 // Import Sass _Partials
@@ -82,4 +91,3 @@ $FA: '../../node_modules/font-awesome/scss';
 @import './partials/svg';         // Styles for inline-rendered SVG elements
 @import './partials/keyframes';   // Styles for CSS animations based on keyframes CSS at-rule
 @import './partials/mobile';      // Styles for CSS mobile media queries
-// @import '../../node_modules/font-awesome/scss/font-awesome';  // Font-Awesome NPM module import
