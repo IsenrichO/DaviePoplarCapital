@@ -11,7 +11,9 @@ and (max-device-width: 700px) {
     overflow-y: scroll;
   }
   .center-cont.about,
-  .center-cont.focus { width: 80vw; }
+  .center-cont.focus,
+  .contact .center-cont,
+  #maps-container { width: 80vw; }
   main.about,
   main.focus,
   main.contact {
@@ -22,18 +24,12 @@ and (max-device-width: 700px) {
   }
   .focus {
     .info { @include flex(flex, column, space-around, flex-start); }
-    .third { display: block !important; }
     ul { padding-left: 5rem; }
   }
-  .contact {
-    .center-cont { width: 85vw; }
-    .wrapper {
-      @include flex(flex, column);
-      height: auto !important;
-
-      > div:first-child { border: none; }
-      .primary-btn { width: 85%; }
-    }
+  .contact .wrapper {
+    @include flex(flex, column);
+    > div:first-child { border: none; }
+    .primary-btn { width: 85%; }
   }
   .focus .info,
   .contact .wrapper { background-color: transparent; }
@@ -43,21 +39,19 @@ and (max-device-width: 700px) {
     margin: 1rem auto;
     background-color: $theme-white;
   }
-  #maps-container {
-    width: 85vw;
-    height: 30vh;
-
-    > div { width: inherit !important; }
-  }
+  
   footer {
     position: relative;
     overflow: hidden;
-    
     p {
       width: 65% !important;
       margin-left: 7.5%;
     }
-    .social-share { position: relative; }
+    .social-share {
+      position: relative !important;
+      max-width: 15vw !important;
+      > a { width: 3.5vh !important; }
+    }
   }
   .DPC-logo {
     width: 90vw;

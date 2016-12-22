@@ -26,6 +26,7 @@
   top: 2%;
   color: $theme-primary;
   font: 3.5rem/1 'Open Sans', sans-serif;
+  text-shadow: 0 0 6px $theme-white;
   cursor: pointer;
   z-index: 10;
 }
@@ -80,6 +81,11 @@
     margin: 1.428571rem auto;
     background: $theme-primary;
   }
+  .info { @include flex(flex, row, space-around, flex-start); }
+  .third {
+    width: 32.5%;
+    text-align: left;
+  }
   ul {
     list-style-type: disc;
     list-style-position: outside;
@@ -88,7 +94,6 @@
     margin: 0;
     padding-left: 2.5rem;
     word-wrap: break-word;
-
     li {
       margin: 0.714286rem 0.714286rem 0.714286rem 0;
       font: 1rem/1.714286 'Open Sans', sans-serif;
@@ -137,7 +142,6 @@
   svg:hover { box-shadow: 0 0 2px 0.5px rgba(255, 255, 255, 0.5); }
   > a {
     text-align: center;
-    
      > img {
       width: 75%;
       height: auto;
@@ -164,13 +168,6 @@
     div.contact_Btns {
       margin: 0.714286rem auto 5% 0;
       text-align: left;
-    }
-    > .third {
-      width: 32.5%;
-      display: inline-block;
-      position: relative;
-      text-align: left;
-      vertical-align: top;
     }
   }
 }
@@ -209,7 +206,7 @@
     @include flex(inline-flex, row);
     position: absolute;
     width: 15%;
-    min-width: 8.928571rem;
+    max-width: 10vw;
     height: 100%;
     right: 0;
     top: 0;
@@ -225,7 +222,8 @@
   position: relative;
   display: block;
   width: 675px;
-  height: 250px;
+  height: 30vh;
+  max-height: 250px;
   margin: 0 auto;
 }
 
