@@ -24,12 +24,6 @@
     @extend %boxShadowHover;
     i { color: $theme-primary; }
   }
-  // &:hover {
-  //   @extend %boxShadowHover;
-  //   background-color: $theme-white;
-  //   color: $theme-primary;
-  //   > i { color: $theme-primary; }
-  // }
 }
 
 
@@ -130,10 +124,33 @@
   }
 }
 
+.error-wrapper {
+  @include flex(flex, row, space-around, flex-start);
+  height: 30vh;
+  max-height: 300px;
+  padding: 2rem;
+  > div {
+    width: 60%;
+    h3 {
+      padding-bottom: 0;
+      color: $theme-primary;
+      background-color: transparent;
+    }
+    p { @include fontStyle(normal, 1.25rem, 1, $content-primary); }
+    a {
+      color: $theme-primary;
+      &:hover { color: $linkedIn-blue; }
+    }
+  }
+  img { width: 25%; }
+}
+
 .about .info,
 .focus .info,
-.contact .wrapper { background-color: $theme-white; }
+.contact .wrapper,
+.error-wrapper { background-color: $theme-white; }
 .center-cont,
+.error-wrapper,
 #maps-container { width: 675px; }
 
 .footer {
