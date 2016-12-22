@@ -22,10 +22,7 @@ and (max-device-width: 700px) {
     min-height: 93vh;
     margin-top: 15vh;
   }
-  .focus {
-    .info { @include flex(flex, column, space-around, flex-start); }
-    ul { padding-left: 5rem; }
-  }
+  .focus .info { @include flex(flex, column, space-around, flex-start); }
   .contact .wrapper {
     @include flex(flex, column);
     > div:first-child { border: none; }
@@ -39,7 +36,7 @@ and (max-device-width: 700px) {
     margin: 1rem auto;
     background-color: $theme-white;
   }
-  
+
   footer {
     position: relative;
     overflow: hidden;
