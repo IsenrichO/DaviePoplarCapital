@@ -2,8 +2,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 
-import NavBar from './NavBar';
-import Footer from './Footer';
+import NavBar from './partials/NavBar';
+import Footer from './partials/Footer';
 
 
 export default class MainLayout extends Component {

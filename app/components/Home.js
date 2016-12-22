@@ -3,7 +3,7 @@ import React from 'react';
 import { Link } from 'react-router';
 
 import DPCLogo from '../constants/svg/DPCLogo_SVG';
-import Footer from './Footer';
+import Footer from './partials/Footer';
 
 
 const Home = () => (
