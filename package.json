@@ -2,7 +2,7 @@
   "name": "DaviePoplarCapital",
   "version": "2.0.0",
   "description": "Personal portfolio website git repository for Oliver Isenrich",
-  "main": "./public/js/bundle.js",
+  "main": "./public/dist/bundle.js",
   "scripts": {
     "start": "nodemon",
     "dev": "webpack-dev-server",
