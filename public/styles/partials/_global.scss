@@ -43,6 +43,15 @@ main {
   align-items: center;
 }
 
+h3 {
+  margin: 0;
+  padding: 2.5rem 0;
+  text-align: center;
+  color: $theme-white;
+  background-color: $theme-primary-op;
+  font: 1.571429rem/1.571429rem 'Open Sans', 'Trebuchet MS', sans-serif;
+}
+
 a,
 a:visited,
 a:focus,

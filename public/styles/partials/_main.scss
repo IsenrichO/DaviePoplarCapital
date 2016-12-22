@@ -148,14 +148,6 @@
       text-align: center;
     }
   }
-  > h3 {
-    background-color: $theme-primary-op;
-    text-align: center;
-    color: $theme-white;
-    font: 1.571429rem/1.571429rem 'Open Sans', 'Trebuchet MS', sans-serif;
-    padding: 2.5rem 0;
-    margin: 0;
-  }
   > div {
     > div.contact_Info {
       display: inline-block;
@@ -228,7 +220,7 @@
 }
 
 .info-window {
-  h3 {
+  h4 {
     display: inline;
     color: $theme-primary;
     font-weight: bold;
@@ -250,7 +242,7 @@
 .fa {
   display: inline !important;
   margin-right: 0.75rem;
-  color: $theme-primary; // #4F98C9;
+  color: $theme-primary;
   font: 500 1.15rem/1.2 'FontAwesome' !important;
 
   &.invert { color: $theme-white; }
