@@ -13,21 +13,25 @@ const DPCLogo = () => (
       y="52.5%">
       DPC
     </text>
+    <line
+      x1="23.684211%"
+      // x1="135px"
+      y1="60%"
+      x2="76.315789%"
+      // x2="435px"
+      y2="60%" />
     <text
       data-section="logo-sub"
       x="50%"
-      y="72.5%">
+      y="73.5%">
       Davie Poplar Capital
     </text>
     <line
-      x1="135px"
-      y1="60%"
-      x2="435px"
-      y2="60%" />
-    <line
-      x1="135px"
+      x1="23.684211%"
+      // x1="135px"
       y1="77.5%"
-      x2="435px"
+      x2="76.315789%"
+      // x2="435px"
       y2="77.5%" />
   </svg>
 );
