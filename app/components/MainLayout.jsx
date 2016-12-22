@@ -4,6 +4,7 @@ import { Link } from 'react-router';
 
 import NavBar from './partials/NavBar';
 import Footer from './partials/Footer';
+import { assignClassNames } from '../Mixins';
 
 
 export default class MainLayout extends Component {
@@ -14,12 +15,7 @@ export default class MainLayout extends Component {
 
   componentDidMount() { this.getHashAsClass(); }
   componentWillReceiveProps() { this.getHashAsClass(); }
-
-  getHashAsClass() {
-    const assignClass = () => 'main-content'
-      + (/^#\/$/.test(document.location.hash) ? ' home' : ` ${document.location.hash.match(/\w+/gi)}`);
-    this.refs.main.className = assignClass();
-  }
+  getHashAsClass() { assignClassNames(this.refs.main); }
 
   render() {
     return (

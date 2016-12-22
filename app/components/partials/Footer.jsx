@@ -3,14 +3,8 @@ import React from 'react';
 
 import LinkedInLogo from '../../constants/svg/LinkedInLogo_SVG';
 import EmailGlyph from '../../constants/svg/EmailGlyph_SVG';
+import { appendCopyright } from '../../Mixins';
 
-
-// Utility functions future proofs copyright year:
-const appendCopyright = () => {
-  let currentYear = new Date().getFullYear();
-  return `Copyright ${String.fromCharCode(169)} ${currentYear} \
-              Davie Poplar Capital, LLC. | All Rights Reserved`;
-};
 
 const Footer = () => (
   <footer className="footer">

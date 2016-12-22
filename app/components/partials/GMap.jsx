@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import { GoogleMapLoader, GoogleMap, Marker, InfoWindow } from 'react-google-maps';
 
 import GoogleMapStyles from '../../constants/json/GoogleMapStyles.json';
+import LocationInfo from '../../constants/json/LocationInfoData.json';
+import { INFO_MAP, renderContactInfo } from '../../Mixins';
 
 
 export default class GMap extends Component {
@@ -19,10 +21,8 @@ export default class GMap extends Component {
 
   addMarker() {
     const toggleInfoWindow = () => this.handleInfoWindowDisplayState();
-
     return (
       <Marker
-        ref="DPCMapMarker"
         position={ this.state.DPC_Coords }
         icon={{
           path: 'M61.5,0 C91,0 125,24.5 125,62.5 C125,94.5181999 78,185.5 61.5,185.5 C45,185.5 0,102.807291 0,62.5 C0,25 32,0 61.5,0 Z M63,96 C81.7776815,96 97,80.7776815 97,62 C97,43.2223185 81.7776815,28 63,28 C44.2223185,28 29,43.2223185 29,62 C29,80.7776815 44.2223185,96 63,96 Z',
@@ -48,8 +48,7 @@ export default class GMap extends Component {
         <div className="info-window">
           <h3>Davie Poplar Capital</h3>
           <hr />
-          <p>185 Windchime Ct, Suite 201</p>
-          <p>Raleigh, NC 27615</p>
+          { renderContactInfo(LocationInfo.slice(1)) }
         </div>
       </InfoWindow>
     );
@@ -64,7 +63,6 @@ export default class GMap extends Component {
             defaultCenter={ this.state.DPC_Coords }
             defaultZoom={ 14 }
             defaultOptions={{ styles: GoogleMapStyles }}
-            ref='map'
             onClick={ () => this.handleInfoWindowDisplayState(false) }>
             { this.addMarker() }
           </GoogleMap>
