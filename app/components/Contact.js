@@ -1,7 +1,7 @@
 'use strict';
 import React from 'react';
 
-import GMap from './GMap';
+import GMap from './partials/GMap';
 import ContactInfo from '../constants/json/ContactInfoData.json';
 import LocationInfo from '../constants/json/LocationInfoData.json';
 // import vCard from '../../public/resources/Ralph Isenrich CFA.vcf';
@@ -15,7 +15,9 @@ const INFO_MAP = new Map([
 
 const renderContactIcons = (datum) => datum.scheme ? (
   <a
-    href={ datum.scheme }>
+    href={ datum.scheme }
+    target="_blank"
+    title={ datum.tooltip }>
     <i className={ `fa fa-${INFO_MAP.get(datum.type)}` } />
   </a>
 ) : datum.type ? (
@@ -35,7 +37,7 @@ const Contact = () => (
   <div className="flexbox-col contact">
     <div className="center-cont">
       <h3>Please contact us to discuss investment opportunities</h3>
-      <div className="wrapper" style={{ background: '#FFF', width: '100%', height: '175px' }}>
+      <div className="wrapper">
         <div className="flex-contact">
           <div className="info">{ renderContactInfo(ContactInfo) }</div>
           <a
