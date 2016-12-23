@@ -34,6 +34,7 @@ and (max-device-width: 700px) {
   .third,
   .contact .flex-contact {
     width: 100% !important;
+    height: auto;
     margin: 1rem auto;
     background-color: $theme-white;
   }
