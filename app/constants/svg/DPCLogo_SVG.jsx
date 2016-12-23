@@ -6,7 +6,8 @@ const DPCLogo = () => (
   <svg
     className="DPC-logo"
     version="1.1"
-    xmlns="http://www.w3.org/2000/svg">
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 570 275">
     <text
       data-section="logo-head"
       x="50%"
@@ -15,10 +16,8 @@ const DPCLogo = () => (
     </text>
     <line
       x1="23.684211%"
-      // x1="135px"
       y1="60%"
       x2="76.315789%"
-      // x2="435px"
       y2="60%" />
     <text
       data-section="logo-sub"
@@ -28,10 +27,8 @@ const DPCLogo = () => (
     </text>
     <line
       x1="23.684211%"
-      // x1="135px"
       y1="77.5%"
       x2="76.315789%"
-      // x2="435px"
       y2="77.5%" />
   </svg>
 );
