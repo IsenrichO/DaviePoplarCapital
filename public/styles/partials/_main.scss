@@ -103,13 +103,13 @@
   .info {
     @include flex(flex, row, space-around, flex-start);
     padding: 1rem 0;
+    p {
+      @include fontStyle(normal, 1.15rem, 1.2, $content-primary);
+      margin: 0.25rem 0;
+    }
   }
   &.flexbox-col,
   .info { @include flex(flex, column, center, flex-start); }
-  .info p {
-    @include fontStyle(normal, 1.15rem, 1.2, $content-primary);
-    margin: 0.25rem 0;
-  }
   .flex-contact {
     @include flex(inline-flex, column);
     position: relative;
