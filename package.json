@@ -1,12 +1,12 @@
 {
   "name": "DaviePoplarCapital",
   "version": "2.0.0",
-  "description": "Personal portfolio website git repository for Oliver Isenrich",
+  "description": "Version control for the corporate website of Davie Poplar Capital, LLC.",
   "main": "./public/dist/bundle.js",
   "scripts": {
-    "start": "nodemon",
     "dev": "webpack-dev-server",
     "dev-server-mods": "webpack-dev-server --progress --profile --colors",
+    "start": "nodemon",
     "start:dev": "webpack-dev-server --inline",
     "watch": "webpack --watch"
   },
@@ -14,25 +14,28 @@
     "type": "git",
     "url": "git+https://github.com/IsenrichO/DaviePoplarCapital.git"
   },
+  "bugs": {
+    "url": "https://github.com/IsenrichO/DaviePoplarCapital/issues",
+    "email": "isenrich@yahool.com"
+  },
+  "homepage": "https://github.com/IsenrichO/DaviePoplarCapital#readme",
   "keywords": [
-    "Isenrich.io",
-    "Personal Portfolio",
-    "Software Engineer",
-    "Oliver",
-    "Isenrich",
-    "Website",
-    "Developer"
+    "Davie Poplar Capital, LLC. (DPC)",
+    "Ralph Isenrich",
+    "Private Equity"
   ],
   "author": {
     "name": "Oliver Isenrich",
     "email": "IsenrichO@gmail.com",
     "url": "http://isenrich.io"
   },
+  "contributors": [
+    {
+      "name": "Oliver Isenrich",
+      "email": "isenrich@yahoo.com"
+    }
+  ],
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/IsenrichO/DaviePoplarCapital/issues"
-  },
-  "homepage": "https://github.com/IsenrichO/DaviePoplarCapital#readme",
   "devDependencies": {
     "autoprefixer-loader": "^3.2.0",
     "babel-core": "^6.18.2",
