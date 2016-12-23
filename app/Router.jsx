@@ -4,7 +4,6 @@ import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 
 // Layouts - route-invariant site layout views:
 import MainLayout from './components/MainLayout';
-import NavBar from './components/partials/NavBar';
 
 // Pages - route-specific views:
 import Home from './components/Home';
