@@ -1,5 +1,5 @@
-const webpack = require('webpack');
-const path = require('path');
+const webpack = require('webpack'),
+      path = require('path');
 
 
 module.exports = {
@@ -9,7 +9,6 @@ module.exports = {
   output: {
     path: path.join(__dirname, 'public/dist'),
     filename: 'bundle.js'
-    // publicPath: 'http://www.daviepoplarcapital.com/'
   },
   module: {
     loaders: [
@@ -24,7 +23,7 @@ module.exports = {
           'css-loader',
           'postcss-loader',
           'sass-loader?outputStyle=expanded'
-          // 'autoprefixer?browsers=last 3 versions',
+          // 'autoprefixer?browsers=last 3 versions'
         ]
       }, { 
         test: /\.json$/i, 
@@ -32,20 +31,21 @@ module.exports = {
       }, {
         test: /\.(pdf|vcf|docx?)$/i,
         loader: 'file-loader?name=[name].[ext]&publicPath=public/resources/&outputPath=public/dist/'
-        // loader: 'file-loader?name=/resources/[name].[ext]'
       }, {
         test: /\.(eot|woff|woff2|ttf|svg|png|jpe?g|gif)(\?\S*)?$/i,
         loader: 'url?limit=100000&name=[name].[ext]'
-        // loader: 'file-loader?name=/images/[name].[ext]'
       }
     ]
   },
   watch: true,
   devtool: 'cheap-eval-source-map',
   devServer: {
-    // contentBase: './public',
+    colors: true,
+    noInfo: false,
+    hot: true,
     inline: true,
-    port: 8100
+    port: 8100,
+    host: 'localhost'
   },
   plugins: [
     new webpack.DefinePlugin({
