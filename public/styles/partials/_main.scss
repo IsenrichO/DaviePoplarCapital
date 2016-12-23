@@ -1,7 +1,6 @@
 
 
-// General heritable class styles
-// --------------------------
+// General heritable class styles:
 .half { width: 50%; }
 .third {
   width: 32.5%;
@@ -27,8 +26,7 @@
 }
 
 
-// Navigation sidebar styles
-// --------------------------
+// Navigation Sidebar Styles:
 #nav-bar {
   position: absolute;
   top: 0;
@@ -73,11 +71,8 @@
   }
 }
 
-
-// Main content styles
-// --------------------------
+// Main Content Styles:
 .home .center-cont { width: auto; }
-
 .about {
   .info { padding-bottom: 5%; }
   p {
@@ -168,13 +163,14 @@
     height: 100%;
     right: 0;
     top: 0;
-    > a { width: calc(7vh * 0.6); }
+    > a {
+      width: calc(7vh * 0.6);
+      &:hover .frame { fill: $linkedIn-blue; }
+    }
   }
 }
 
-
-// Google Maps JavaScript API Styles
-// --------------------------
+// Google Maps JavaScript API Styles:
 #maps-container {
   height: 30vh;
   max-height: 250px;
@@ -188,9 +184,7 @@
   }
 }
 
-
-// Font Awesome (`.fa`) Styles
-// --------------------------
+// Font Awesome (`.fa`) Styles:
 .fa {
   @include fontStyle(500, 1.15rem, 1.2, $theme-primary, 'FontAwesome' !important);
   display: inline !important;

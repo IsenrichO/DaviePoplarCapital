@@ -1,6 +1,6 @@
 
-// Sass $variable Declarations
-// --------------------------
+/* Sass $variable Declarations
+ * -------------------------- */
 $theme-primary: #4F98C9;
 $theme-primary-op: rgba(79, 152, 201, 0.8);
 $theme-white: #FFF;
@@ -18,8 +18,8 @@ $Bckg-img: 'Site_bg-min.jpg';
 $FA: '../../node_modules/font-awesome/scss';
 
 
-// Sass @mixin Declarations
-// --------------------------
+/* Sass @mixin Declarations
+ * -------------------------- */
 @mixin flex($flex: flex, $flexDir: row, $justification: space-around, $flexAlign: center) {
   display: $flex;
   flex-flow: $flexDir nowrap;
@@ -59,8 +59,8 @@ $FA: '../../node_modules/font-awesome/scss';
 }
 
 
-// Sass %placeholder Declarations
-// --------------------------
+/* Sass %placeholder Declarations
+ * -------------------------- */
 %invert {
   color: $theme-white !important;
   background-color: $theme-primary !important;
@@ -84,8 +84,8 @@ $FA: '../../node_modules/font-awesome/scss';
 };
 
 
-// Import Sass _Partials
-// --------------------------
+/* Import Sass _Partials
+ * -------------------------- */
 @import './partials/global';      // Styles for base-level HTML tags sans any selectors
 @import './partials/main';        // Custom styles for classes
 @import './partials/svg';         // Styles for inline-rendered SVG elements

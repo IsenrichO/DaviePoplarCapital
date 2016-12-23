@@ -1,8 +1,7 @@
 
 
-// DECLARATION OF SITE ANIMATION KEYFRAMES
-// --------------------------
-
+/* CSS Animation @keyframe Declarations
+ * -------------------------- */
 
 // Left navigation sidebar growth animation:
 @-webkit-keyframes sideExpand {
@@ -66,7 +65,6 @@
   }
 }
 
-
 // Left navigation sidebar collapse animation:
 @-webkit-keyframes sideCollapse {
   from {
@@ -112,7 +110,6 @@
     overflow: hidden;
   }
 }
-
 
 // Visible-to-hidden keyframe animation:
 @-webkit-keyframes fader {
