@@ -3,12 +3,13 @@ import React from 'react';
 import { Link } from 'react-router';
 
 import DPCLogo from '../constants/svg/DPCLogo_SVG';
-import Footer from './partials/Footer';
 
 
 const Home = () => (
   <div className="center-cont home">
-    <Link to="about">
+    <Link
+      to="about"
+      rel="next">
       <DPCLogo />
     </Link>
   </div>

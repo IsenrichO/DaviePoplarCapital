@@ -12,12 +12,14 @@ const Footer = () => (
     <div className="social-share">
       <a
         href="https://www.linkedin.com/in/isenrichr"
+        rel="external"
         target="_blank">
         <LinkedInLogo />
       </a>
       <a
         href="mailto:ralph@daviepoplarcapital.com"
-        style={{ left: '0' }}>
+        rel="nofollow"
+        target="_blank">
         <EmailGlyph />
       </a>
     </div>
