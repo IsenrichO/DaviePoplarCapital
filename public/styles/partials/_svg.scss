@@ -1,7 +1,6 @@
 
-// Inline SVG Styles
-// --------------------------
-
+/* Inline SVG Styles
+ * -------------------------- */
 
 // DPC Logo:
 .DPC-logo {
@@ -31,54 +30,30 @@
   }
 }
 
-
 // LinkedIn Logo:
-.linkedIn-logo {
-  circle {
-    @include cbCSSTransformation(transition, fill 0.3s ease-in-out);
-    fill: $theme-primary;
-    cx: 13.5px;
-    cy: 13.5px;
-    r: 13.5px;
-  }
-  g {
-    @include cbCSSTransformation(transform, translate(6.75px, 6.75px));
-    @include svg(none, 0, 1);
-    path { fill: $content-dark; }
-  }
-  &:hover circle { fill: $linkedIn-blue; }
+.linkedIn-logo path {
+  @include cbCSSTransformation(transition, fill 0.3s ease-in-out);
+  fill: $theme-primary;
 }
-
 
 // Email Glyph Icon:
 .email-glyph {
-  rect {
-    @include svg(none, 2, 0.7676768, none, 0.63157893);
-    width: 500px;
-    height: 328.57144px;
-  }
-  #clipPath4175 path {
-    @include svg($theme-black, 10, 1, none, 1, evenodd);
-    @include cbCSSTransformation(transform, translate(196px, 343px));
-  }
-  #clipPath4185 path,
-  #clipPath4195 path { @include svg(none, 2, 0.7676768, none); }
-  #clipPath4185 path { @include cbCSSTransformation(transform, matrix(1, 0, 0, 1.0581841, 402.23997, -201.34757)); }
-  #clipPath4195 path { @include cbCSSTransformation(transform, matrix(1, 0, 0, 1.0581841, -195.97237, -393.68061)); }
-
   .glyph-main {
     @include cbCSSTransformation(transform, translate(-124.9887px, -685.13414px));
     > g { @include cbCSSTransformation(transform, matrix(1.0042942, 0, 0, 1.0049899, -1269.9646, 728.76886)); }
   }
-  .g1 path:first-child {
-    @include cbCSSTransformation(transition, fill 0.3s ease-in-out);
-    @include svg(none, 7.5, 1, $theme-primary);
+  .g1 path {
+    &:first-child {
+      @include cbCSSTransformation(transition, fill 0.3s ease-in-out);
+      @include svg(none, 7.5, 1, $theme-primary);
+    }
+    &:last-child { @include svg(none, 7.5, 1, $theme-black, 0.16161619); }
   }
-  .g1 path:last-child { @include svg(none, 7.5, 1, $theme-black, 0.16161619); }
-  .g2 path:first-child {
-    @include svg(none, 2, 0.7676768, $svg-bckg);
-    @include cbCSSTransformation(transform, matrix(1.9621585, 0, 0, 1.9999006, 1430.5884, -501.93632));
+  .g2 path {
+    &:first-child {
+      @include cbCSSTransformation(transform, matrix(1.9621585, 0, 0, 1.9999006, 1430.5884, -501.93632));
+      @include svg(none, 2, 0.7676768, $svg-bckg);
+    }
+    &:last-child { @include svg(#979797, 7.5, 1, $theme-white, 1, evenodd); }
   }
-  .g2 path:last-child { @include svg(#979797, 7.5, 1, $theme-white, 1, evenodd); }
-  &:hover .g1 path:first-child { fill: $linkedIn-blue; }
 }
