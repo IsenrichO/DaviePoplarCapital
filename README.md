@@ -1,8 +1,6 @@
 
 # Davie Poplar Capital
 
----
-
 [
   <img
     src="https://goo.gl/VHJ63f"
@@ -10,9 +8,9 @@
     alt="Davie Poplar Capital, LLC. Logo (Blue)" />
 ](http://www.daviepoplarcapital.com/)
 
-[**We're On The Web!**](http://www.daviepoplarcapital.com/) Take a look.
-
 ---
+
+[**We're On The Web!**](http://www.daviepoplarcapital.com/) Take a look.
 
 #### About
 
@@ -21,9 +19,9 @@ Davie Poplar Capital (DPC) is a Raleigh, NC-based private investment firm that a
 ##### DPC Investment Parameters
 | Financial            | Business                 | Industry                           |
 | :------------------  | :----------------------- | :--------------------------------- |
-| Revenues up to $20mm | Recurring Revenues       | Healthcare Services                |
-| EBITDA $500K – 3mm   | CAPEX Light              | Education                          |
-| EBITDA Margins 5%+   | Strong Middle Management | Media                              |
+| Revenues ≤ $20<      | Recurring Revenues       | Healthcare Services                |
+| EBITDA $500K – 3M    | CAPEX Light              | Education                          |
+| EBITDA Margins ≥ 5%+ | Strong Middle Management | Media                              |
 |                      |                          | Business Services                  |
 |                      |                          | Light Manufacturing & Distribution |
 
