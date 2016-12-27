@@ -89,6 +89,17 @@ $FA: '../../node_modules/font-awesome/scss';
           box-shadow: 0 8px 13px 0.5px #B3B3B3,
                       -4px -2px 14px 2px #B3B3B3;
 };
+%no-select {
+  -ms-pointer-events: visiblePainted;
+      pointer-events: visiblePainted;
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+         -o-user-select: none;
+            user-select: none;
+};
 
 
 /* Import Sass _Partials
