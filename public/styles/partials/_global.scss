@@ -25,12 +25,6 @@ body {
   overflow: hidden;
 }
 
-noscript {
-  @include fontStyle(normal, 1.428571rem, 1.428571, $content-error);
-  width: 50%;
-  height: auto;
-}
-
 main {
   @include flex(flex, row, center);
   width: 100vw;
