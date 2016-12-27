@@ -6,7 +6,7 @@
 // Left navigation sidebar growth animation:
 @-webkit-keyframes sideExpand {
   0% {
-    width: 0%;
+    width: 0;
     opacity: 0;
     visibility: hidden;
     overflow: hidden;
@@ -21,7 +21,7 @@
 }
 @-moz-keyframes sideExpand {
   0% {
-    width: 0%;
+    width: 0;
     opacity: 0;
     visibility: hidden;
     overflow: hidden;
@@ -36,7 +36,7 @@
 }
 @-o-keyframes sideExpand {
   0% {
-    width: 0%;
+    width: 0;
     opacity: 0;
     visibility: hidden;
     overflow: hidden;
@@ -51,7 +51,7 @@
 }
 @keyframes sideExpand {
   0% {
-    width: 0%;
+    width: 0;
     opacity: 0;
     visibility: hidden;
     overflow: hidden;
@@ -67,46 +67,50 @@
 
 // Left navigation sidebar collapse animation:
 @-webkit-keyframes sideCollapse {
-  from {
+  0% {
     width: 20vw;
     min-width: 15rem;
     overflow: visible;
   }
-  to {
-    width: 0%;
+  25% { width: 22.5vw; }
+  100% {
+    width: 0;
     overflow: hidden;
   }
 }
 @-moz-keyframes sideCollapse {
-  from {
+  0% {
     width: 20vw;
     min-width: 15rem;
     overflow: visible;
   }
-  to {
-    width: 0%;
+  25% { width: 22.5vw; }
+  100% {
+    width: 0;
     overflow: hidden;
   }
 }
 @-o-keyframes sideCollapse {
-  from {
+  0% {
     width: 20vw;
     min-width: 15rem;
     overflow: visible;
   }
-  to {
-    width: 0%;
+  25% { width: 22.5vw; }
+  100% {
+    width: 0;
     overflow: hidden;
   }
 }
 @keyframes sideCollapse {
-  from {
+  0% {
     width: 20vw;
     min-width: 15rem;
     overflow: visible;
   }
-  to {
-    width: 0%;
+  25% { width: 22.5vw; }
+  100% {
+    width: 0;
     overflow: hidden;
   }
 }
