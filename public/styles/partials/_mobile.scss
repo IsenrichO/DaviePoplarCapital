@@ -13,8 +13,7 @@ and (max-device-width: 700px) {
   }
   .center-cont.about,
   .center-cont.focus,
-  .contact .center-cont,
-  #maps-container { width: 80vw; }
+  .contact .center-cont { width: 80vw; }
   main.about,
   main.focus,
   main.contact {
@@ -56,5 +55,8 @@ and (max-device-width: 700px) {
     width: 90vw;
     max-width: 380px;
     height: 15rem;
+    text[data-section=logo-head] { font: 700 12rem/12 Georgia, sans-serif; }
+    text[data-section=logo-sub] { font: 3.5rem/3.5rem Georgia, sans-serif; }
   }
+  #maps-container { @include mobileMap(mobile); }
 }
