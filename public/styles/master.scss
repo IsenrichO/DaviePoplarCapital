@@ -8,13 +8,13 @@ $theme-black: #000;
 $content-primary: #626262;
 $content-light: #C0C0C0;
 $content-dark: #202020;
-$content-error: #D94242;
+$content-error: #C67878;
 $font-chain: Trebuchet MS, Open Sans, sans-serif;
 $svg-bckg: #E9E9E9;
 $linkedIn-blue: #0A82BE;
 $PUBLIC_BASE: 'http://www.daviepoplarcapital.com/public/';
 $CLOUDINARY_BASE: 'https://res.cloudinary.com/http-isenrich-io/image/upload/';
-$Bckg-img: 'Davie Poplar Capital/Site_bg-min.jpg';
+$Bckg-img: 'Davie%20Poplar%20Capital/Site_bg-min.jpg';
 $FA: '../../node_modules/font-awesome/scss';
 
 
@@ -56,7 +56,14 @@ $FA: '../../node_modules/font-awesome/scss';
   $pos: top left;
   @if $medium == mobile { $pos: center; }
   background: $content-dark url('#{$CLOUDINARY_BASE}w_#{$imgWidth}/#{$Bckg-img}') no-repeat $pos / cover;
-}
+};
+@mixin mobileMap($medium: screen) {
+  $height: 30vh;
+  @if $medium != screen { $height: 20vh; }
+  width: 100%;
+  height: $height;
+  max-height: 275px;
+};
 
 
 /* Sass %placeholder Declarations
