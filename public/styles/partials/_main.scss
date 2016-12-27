@@ -128,7 +128,7 @@
     width: 60%;
     h3 {
       padding-bottom: 0;
-      color: $theme-primary;
+      color: $content-error;
       background-color: transparent;
     }
     p { @include fontStyle(normal, 1.25rem, 1, $content-primary); }
@@ -171,10 +171,7 @@
 }
 
 // Google Maps JavaScript API Styles:
-#maps-container {
-  height: 30vh;
-  max-height: 250px;
-}
+#maps-container { @include mobileMap(); }
 .info-window {
   h4 { display: inline; }
   p {
