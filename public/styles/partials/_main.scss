@@ -31,6 +31,8 @@
   position: absolute;
   top: 0;
 }
+#nav-bar,
+#nav-bar * { @extend %no-select; }
 #nav-links-wrapper {
   @include fontStyle(300, 2rem, 1.428571rem, inherit, 'Open Sans', sans-serif);
   position: fixed;
@@ -39,8 +41,8 @@
   background: $theme-primary-op;
   overflow: hidden;
   z-index: 8;
-  &.active { @include cbCSSTransformation(animation, sideExpand 0.35s ease-out forwards); }
-  &.inactive { @include cbCSSTransformation(animation, sideCollapse 0.35s ease-out forwards); }
+  &.active { @include cbCSSTransformation(animation, sideExpand 0.35s ease-in 1 normal forwards); }
+  &.inactive { @include cbCSSTransformation(animation, sideCollapse 0.35s cubic-bezier(0.1, 0.1, 0.5, 0.1) 1 normal forwards); }
 }
 #hamburger-icon {
   @include cbCSSTransformation(transition, all 0.35s ease-out);
@@ -55,18 +57,17 @@
   position: relative;
   top: 17.5%;
   > a {
-    @include cbCSSTransformation(transition, padding-left 0.35s 0.1s ease-out);
+    @include cbCSSTransformation(transition, all 0.35s 0.1s ease-out);
     display: block;
     width: 100%;
-    padding: 1.785714rem 0;
+    padding: 1.785714rem;
     color: $theme-white;
-    text-indent: 1.5rem;
-    box-sizing: content-box;
+    white-space: nowrap;
     &:hover {
-      padding-left: 10%;
+      width: 110%;
+      text-indent: 10%;
       background-color: $theme-white;
       color: $theme-primary;
-      i { color: $theme-primary;}
     }
   }
 }
@@ -151,12 +152,13 @@
 .footer {
   @include flex(flex, row, space-between);
   p {
-    @include fontStyle(normal, inherit, inherit, $content-primary);
+    @include fontStyle(normal, 1rem, 1, $content-primary);
     width: 100%;
     text-align: center;
   }
   .social-share {
     @include flex(inline-flex, row);
+    @extend %no-select;
     position: absolute;
     width: 15%;
     max-width: 10vw;

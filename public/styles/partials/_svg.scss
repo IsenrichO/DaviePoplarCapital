@@ -5,6 +5,7 @@
 // DPC Logo:
 .DPC-logo {
   @include cbCSSTransformation(transition, all 0.3s ease-in-out);
+  @extend %no-select;
   width: 570px;
   height: 275px;
   background-color: $theme-primary-op;
@@ -24,6 +25,7 @@
   }
   line { @include svg($theme-white, 1); }
   &:hover {
+    @include cbCSSTransformation(transform, scale(1.035));
     -webkit-box-shadow: 0 0 9px 1px rgba(255, 255, 255, 0.5);
        -moz-box-shadow: 0 0 9px 1px rgba(255, 255, 255, 0.5);
             box-shadow: 0 0 9px 1px rgba(255, 255, 255, 0.5);
