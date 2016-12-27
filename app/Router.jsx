@@ -2,10 +2,10 @@
 import React from 'react';
 import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 
-// Layouts - route-invariant site layout views:
+// Layouts: Route-invariant site layout views:
 import MainLayout from './components/MainLayout';
 
-// Pages - route-specific views:
+// Pages: Route-specific views:
 import Home from './components/pages/Home';
 import About from './components/pages/About';
 import Focus from './components/pages/Focus';
