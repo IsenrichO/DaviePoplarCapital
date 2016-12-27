@@ -107,9 +107,15 @@ export { renderContactIcons, renderContactText, renderContactInfo };
 /* NavBar component
  * -------------------------- */
 
+const toggleNavClasses = (nav) => {
+  !nav.classList.length
+    ? nav.classList.add('active')
+    : ['active', 'inactive'].forEach(navClass => nav.classList.toggle(navClass));
+};
+
 // Function `activate` induces active sidebar menu display state:
 const activate = (glyph, nav) => {
-  nav.classList.toggle('active');
+  toggleNavClasses(nav);
   glyph.style.textShadow = 'none';
   glyph.style.color = '#FFF';
   glyph.style.transform = 'rotate(90deg)';
@@ -117,7 +123,7 @@ const activate = (glyph, nav) => {
 
 // Function `deactivate` induces inactive sidebar menu display state:
 const deactivate = (glyph, nav) => {
-  nav.classList.toggle('active');
+  toggleNavClasses(nav);
   glyph.style.color = '#4F98C9';
   glyph.style.transform = 'rotate(0deg)';
   glyph.style.textShadow = '0 0 6px #FFF';
