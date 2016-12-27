@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head profile="https://www.w3.org/1999/xhtml/vocab">
-	<title>Home | DPC</title>
+	<title>Private Equity Firm | Davie Poplar Capital</title>
 
 	<!-- Site Meta-Data -->
 	<meta charset="UTF-8" />	<!-- HTML5 -->
@@ -26,17 +26,39 @@
 	<!-- Browser tab icon -->	
 	<link href="public/images/favicon.ico" rel="icon" type="image/vnd.microsoft.icon" />
 
-	<!-- Google Maps JavaScript API, v3 Script Tag -->
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFeObw6Z_YFS5KMvGa08I8n0RASI4kNSY" async defer></script>
-	
-	<noscript>
-		This website has been built with the intention of being used in JavaScript-enabled browsing contexts. If you're seeing this, your browser may not be a JavaScript-capable browser or may have JavaScript disabled. For an optimal viewing experience, try these fixes: 1.) ensure you have not disabled script execution in your browser's settings or, barring the first fix, 2.) reload this page in a different browser. Almost any modern browser in wide circulation today (e.g., Chrome, Firefox, Safari) should serve these purposes, but Chrome is the recommended choice.
-	</noscript>
+	<!-- Styled for scripting-disabled browsers -->
+	<style>
+		/* Base non-compiled HTML font-size => 16px */
+		noscript {
+			display: block;
+		  width: 85vw;
+		  margin: 10vw auto;
+		  color: #C67878;
+		  font: normal 1.25rem/1 'Trebuchet MS', sans-serif;
+		}
+		noscript ol { list-style-type: none; }
+		noscript ol > li { padding-left: 2.857143rem; }
+	  noscript ol > li:before {
+	    content: attr(data-num) '\002E \0029 \0020';  /* => "1.) " */
+	    margin-left: -3rem;
+	    font-family: monospace, sans-serif;
+	  }
+	</style>
 </head>
-
 <body>
+	<noscript>
+	  This website has been built with the intention of being used in JavaScript-enabled browsing contexts. If you're seeing this, your browser may not be a JavaScript-capable browser or may have JavaScript disabled. For an optimal viewing experience, try these fixes:
+	  <ol>
+	    <li data-num="1">Ensure you have not disabled script execution in your browser's settings or, barring the first fix,</li>
+	    <li data-num="2">Reload this page in a different browser.</li>
+	  </ol>
+	  Almost any modern browser in wide circulation today (e.g., Chrome, Firefox, Safari) should serve these purposes, but Chrome is the recommended choice.
+	</noscript>
 	<!-- Root injection target for React.js -->
 	<div id="root"></div>
+
+	<!-- Google Maps JavaScript API, v3 Script Tag -->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFeObw6Z_YFS5KMvGa08I8n0RASI4kNSY" async defer></script>
 
 	<!-- Webpack Bundle -->
 	<script src="public/dist/bundle.js" type="application/javascript"></script>
