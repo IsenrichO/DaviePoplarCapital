@@ -53,6 +53,7 @@
     "json-loader": "^0.5.4",
     "node-sass": "^4.0.0",
     "postcss-loader": "^1.2.1",
+    "react-addons-css-transition-group": "^15.4.1",
     "react-google-maps": "^4.11.0",
     "sass-loader": "^4.1.0",
     "style-loader": "^0.13.1",
