@@ -35,5 +35,4 @@ const DPCLogo = () => (
 
 export default DPCLogo;
 
-
 // Oh no! Your browser does not support inline SVG elements. Maybe try Chrome.
