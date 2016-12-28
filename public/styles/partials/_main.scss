@@ -190,3 +190,32 @@
   margin-right: 0.75rem;
   &.invert { color: $theme-white; }
 }
+
+// ReactCSSTransitionGroup Animation Styles:
+.router-transition-group-enter {
+  @include cbCSSTransformation(transition, all 0.750s cubic-bezier(0.175, 0.665, 0.320, 1));
+  @include cbCSSTransformation(transform, translate(100%, 0));
+  @include cbCSSTransformation(transform, translate3d(100%, 0, 0));
+  opacity: 0;
+  &.router-transition-group-enter-active {
+    @include cbCSSTransformation(transform, translate(100%, 0));
+    @include cbCSSTransformation(transform, translate3d(100%, 0, 0));
+    opacity: 0;
+  }
+}
+.router-transition-group-leave {
+  @include cbCSSTransformation(transition, all 0.750s cubic-bezier(0.175, 0.665, 0.320, 1));
+  position: relative;
+  margin: auto;
+  left: 0;
+  @include cbCSSTransformation(transform, translate(0, 0));
+  @include cbCSSTransformation(transform, translate3d(0, 0, 0));
+  opacity: 0;
+  &.router-transition-group-leave-active {
+    position: relative;
+    left: 100%;
+    @include cbCSSTransformation(transform, translate(100%, 0));
+    @include cbCSSTransformation(transform, translate3d(100%, 0, 0));
+    @extend %hidden;
+  }
+}

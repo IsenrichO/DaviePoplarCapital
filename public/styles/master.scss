@@ -32,7 +32,25 @@ $FA: '../../node_modules/font-awesome/scss';
       -ms-#{$transform}: $transformProps;
        -o-#{$transform}: $transformProps;
           #{$transform}: $transformProps;
-}
+};
+@mixin fade($duration: 0.135s, $delay: 0s, $easingFunc: cubic-bezier(0.0, 0.0, 0.2, 1), $properties: all) {
+  $shorthand: '';
+  $timing-func: '#{$duration} #{$delay} #{$easingFunc}';
+
+  @each $property in $properties {
+    @if index($properties, $property) < length($properties) {
+      $shorthand: '#{$shorthand} #{$property} #{$timing-func}, ';
+    } @else {
+      $shorthand: '#{$shorthand} #{$property} #{$timing-func}';
+    }
+  }
+
+  -webkit-transition: unquote($shorthand);
+     -moz-transition: unquote($shorthand);
+      -ms-transition: unquote($shorthand);
+       -o-transition: unquote($shorthand);
+          transition: unquote($shorthand);
+};
 @mixin svg($str: none, $strWidth: 7.5, $strOp: 1, $fill: $theme-white, $fillOp: 1, $fillRule: nonzero) {
   fill: $fill;
   fill-rule: nonzero;
@@ -75,6 +93,14 @@ $FA: '../../node_modules/font-awesome/scss';
 %invertHover {
   color: $theme-primary !important;
   background-color: $theme-white !important;
+};
+%hidden {
+  opacity: 0;
+  visibility: hidden;
+};
+%visible {
+  opacity: 1;
+  visibility: visible;
 };
 %boxShadow {
   -webkit-box-shadow: 1px 1px 5px 0.5px #808080;
