@@ -19,3 +19,11 @@ const ContactInfoBox = ({ anchorTarget, infoData, linkData }) => (
 );
 
 export default ContactInfoBox;
+
+
+// Type Checking:
+ContactInfoBox.propTypes = {
+  anchorTarget: React.PropTypes.string,
+  infoData: React.PropTypes.array,
+  linkData: React.PropTypes.object
+};
