@@ -103,7 +103,6 @@ const renderContactInfo = (data) => data.map((datum, index) =>
 export { renderContactIcons, renderContactText, renderContactInfo };
 
 
-
 /* NavBar component
  * -------------------------- */
 
@@ -159,7 +158,6 @@ const renderNavLinks = (links) => links.map((link, index) =>
 );
 
 export { activate, deactivate, detectCurrentRoute, executeNavAction, renderNavLinks };
-
 
 
 /* Miscellaneous functions
