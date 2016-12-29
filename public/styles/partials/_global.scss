@@ -1,6 +1,7 @@
 
-// Styles
-// --------------------------
+/* Styles
+ * -------------------------- */
+ 
 * {
   -webkit-tap-highlight-color: transparent;
   -webkit-font-smoothing: antialiased;
@@ -24,32 +25,33 @@ body {
   overflow: hidden;
 }
 
-noscript {
-  width: 50%;
-  height: auto;
-  font: 1.428571rem/1.428571 Roboto, 'Helvetica Neue', sans-serif;
-  color: $content-error;
-}
-
 main {
-  display: flex;
+  @include flex(flex, row, center);
   width: 100vw;
-  height: 93vh;
+  min-height: 93vh;
   bottom: 7vh;
-  margin: 0;
-  padding: 0;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
 }
 
+ul {
+  position: relative;
+  list-style: disc outside none;
+  word-wrap: break-word;
+}
+li {
+  @include fontStyle(normal, 1rem, 1.714286, $content-primary);
+  margin: 0.714286rem 0;
+}
+
+h4 {
+  color: $theme-primary;
+  font-weight: bold;
+}
 h3 {
+  @include fontStyle(normal, 1.571429rem, 1.571429rem, $theme-white);
   margin: 0;
   padding: 2.5rem 0;
   text-align: center;
-  color: $theme-white;
   background-color: $theme-primary-op;
-  font: 1.571429rem/1.571429rem 'Open Sans', 'Trebuchet MS', sans-serif;
 }
 
 a,
@@ -59,11 +61,11 @@ a:active { text-decoration: none; }
 
 footer {
   position: absolute;
-  display: block;
   width: 100vw;
   height: 7vh;
   left: 0;
   bottom: 0;
   background-color: $content-dark;
+  overflow: hidden;
   z-index: 20;
 }

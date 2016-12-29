@@ -2,16 +2,15 @@
 import React from 'react';
 import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 
-// Layouts - route-invariant site layout views:
+// Layouts: Route-invariant site layout views:
 import MainLayout from './components/MainLayout';
-import NavBar from './components/partials/NavBar';
 
-// Pages - route-specific views:
-import Home from './components/Home';
-import About from './components/About';
-import Focus from './components/Focus';
-import Contact from './components/Contact';
-import Error404 from './components/Error404';
+// Pages: Route-specific views:
+import Home from './components/pages/Home';
+import About from './components/pages/About';
+import Focus from './components/pages/Focus';
+import Contact from './components/pages/Contact';
+import Error404 from './components/pages/Error404';
 
 
 const Routes = () => (

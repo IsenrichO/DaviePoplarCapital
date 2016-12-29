@@ -5,10 +5,8 @@ import { ROUTES_MAP, executeNavAction, renderNavLinks } from '../../Mixins';
 
 
 export default class NavBar extends Component {
-  constructor(props) {
-    super(props);
-  }
-
+  constructor(props) { super(props); }
+  
   componentDidMount() {
     const [self, { toggleBtn: glyph, navWrapper: nav }] = [this, this.refs];
     // Event listener controls automated closure of navigation menu sidebar on outside click event:

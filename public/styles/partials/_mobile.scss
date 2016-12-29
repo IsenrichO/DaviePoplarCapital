@@ -1,6 +1,7 @@
 
-// Mobile Styles
-// --------------------------
+/* Mobile Styles
+ * -------------------------- */
+
 @media only screen
 and (max-device-width: 700px) {
   html { font-size: 10px; }
@@ -12,20 +13,16 @@ and (max-device-width: 700px) {
   }
   .center-cont.about,
   .center-cont.focus,
-  .contact .center-cont,
-  #maps-container { width: 80vw; }
-  main.about,
-  main.focus,
-  main.contact {
+  .contact .center-cont { width: 80vw; }
+  #transition-wrapper.about,
+  #transition-wrapper.focus,
+  #transition-wrapper.contact {
     position: relative;
     height: auto;
     min-height: 93vh;
     margin-top: 15vh;
   }
-  .focus {
-    .info { @include flex(flex, column, space-around, flex-start); }
-    ul { padding-left: 5rem; }
-  }
+  .focus .info { @include flex(flex, column, space-around, flex-start); }
   .contact .wrapper {
     @include flex(flex, column);
     > div:first-child { border: none; }
@@ -36,10 +33,11 @@ and (max-device-width: 700px) {
   .third,
   .contact .flex-contact {
     width: 100% !important;
+    height: auto;
     margin: 1rem auto;
     background-color: $theme-white;
   }
-  
+
   footer {
     position: relative;
     overflow: hidden;
@@ -57,5 +55,11 @@ and (max-device-width: 700px) {
     width: 90vw;
     max-width: 380px;
     height: 15rem;
+    text[data-section=logo-head] { font: 700 12rem/12 Georgia, sans-serif; }
+    text[data-section=logo-sub] { font: 3.5rem/3.5rem Georgia, sans-serif; }
+  }
+  #maps-container {
+    @include mobileMap(mobile);
+    margin-bottom: 7.5vh;
   }
 }
