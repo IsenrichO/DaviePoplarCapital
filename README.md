@@ -3,7 +3,7 @@
 
 [
   <img
-    src="https://goo.gl/VHJ63f"
+    src="https://goo.gl/kbNBe5"
     width="100%"
     alt="Davie Poplar Capital, LLC. Logo (Blue)" />
 ](http://www.daviepoplarcapital.com/)
