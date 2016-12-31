@@ -7,7 +7,7 @@ import { renderSections } from '../../Mixins';
 
 const Focus = () => (
   <div className="center-cont focus">
-    <h3>DPC invests along the following parameters</h3>
+    <h3>DPC Focus</h3>
     <div className="info">{ renderSections(BusinessFocusData) }</div>
   </div>
 );
