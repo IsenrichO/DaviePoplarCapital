@@ -15,7 +15,7 @@ module.exports = {
       {
         test: /\.jsx?$/i,
         exclude: /node_modules/,
-        loader: 'babel'
+        loaders: ['babel']
       }, {
         test: /\.scss$/i,
         loaders: [
@@ -53,6 +53,7 @@ module.exports = {
         'NODE_ENV': JSON.stringify('production')
       }
     }),
+    new webpack.HotModuleReplacementPlugin(),
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.UglifyJsPlugin({
       compress: { warnings: false },
