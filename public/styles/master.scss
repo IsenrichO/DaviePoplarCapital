@@ -44,7 +44,6 @@ $FA: '../../node_modules/font-awesome/scss';
       $shorthand: '#{$shorthand} #{$property} #{$timing-func}';
     }
   }
-
   -webkit-transition: unquote($shorthand);
      -moz-transition: unquote($shorthand);
       -ms-transition: unquote($shorthand);
