@@ -9,7 +9,7 @@ import ContactLinkData from '../../constants/json/ContactLinkData.json';
 const Contact = () => (
   <div className="flexbox-col contact">
     <div className="center-cont">
-      <h3>Please contact us to discuss investment opportunities</h3>
+      <h3>Please contact us to discuss acquisition opportunities</h3>
       <div className="wrapper">{ renderContactInfo(ContactLinkData) }</div>
     </div>
     <GMap />
