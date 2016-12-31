@@ -12,7 +12,7 @@
   }, {
     "type": "phone",
     "value": "(919) 334-8367",
-    "tooltip": "Call Ralph directly",
+    "tooltip": "Call Ralph on his direct line",
     "scheme": "tel:19193348367"
   }
 ]
