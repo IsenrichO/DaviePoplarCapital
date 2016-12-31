@@ -15,7 +15,6 @@ export default class GMap extends Component {
     this.handleInfoWindowDisplayState = this.handleInfoWindowDisplayState.bind(this);
     this.renderInfoWindow = this.renderInfoWindow.bind(this);
     this.state = {
-      defaultCenterCoords: new google.maps.LatLng({ lat: 35.879215, lng: -78.642146 }),
       DPCCoords: new google.maps.LatLng({ lat: 35.875751, lng: -78.642080 }),
       infoWindowActive: false
     };
@@ -66,7 +65,7 @@ export default class GMap extends Component {
         containerElement={ <div id="maps-container" /> }   
         googleMapElement={
           <GoogleMap 
-            defaultCenter={ this.state.defaultCenterCoords }
+            defaultCenter={ this.state.DPCCoords }
             defaultZoom={ 14 }
             defaultOptions={{
               styles: GoogleMapStyles,
