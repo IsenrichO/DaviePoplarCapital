@@ -79,7 +79,9 @@ const renderContactIcons = (datum) => datum.scheme ? (
     <i className={ `fa fa-${INFO_MAP.get(datum.type)}` } />
   </a>
 ) : datum.type ? (
-  <i className={ `fa fa-${INFO_MAP.get(datum.type)}` } />
+  <i
+    className={ `fa fa-${INFO_MAP.get(datum.type)}` }
+    title={ datum.tooltip } />
 ) : null;
 
 // Maps icons output from `renderContactIcons` alongside associated text content:
@@ -106,26 +108,19 @@ export { renderContactIcons, renderContactText, renderContactInfo };
 /* NavBar component
  * -------------------------- */
 
+// Handles assignment of the .active or .inactive CSS classes on #nav-links-wrapper:
 const toggleNavClasses = (nav) => {
   !nav.classList.length
     ? nav.classList.add('active')
     : ['active', 'inactive'].forEach(navClass => nav.classList.toggle(navClass));
 };
 
-// Function `activate` induces active sidebar menu display state:
-const activate = (glyph, nav) => {
+// Alternately activates and deactivates the left-hand side navigation sidebar:
+const toggleSidebar = (glyph, nav, status = 'active') => {
   toggleNavClasses(nav);
-  glyph.style.textShadow = 'none';
-  glyph.style.color = '#FFF';
-  glyph.style.transform = 'rotate(90deg)';
-};
-
-// Function `deactivate` induces inactive sidebar menu display state:
-const deactivate = (glyph, nav) => {
-  toggleNavClasses(nav);
-  glyph.style.color = '#4F98C9';
-  glyph.style.transform = 'rotate(0deg)';
-  glyph.style.textShadow = '0 0 6px #FFF';
+  glyph.style.color = `#${(status === 'active' ? 'FFF' : '4F98C9')}`;
+  glyph.style.transform = `rotate(${(status === 'active' ? '9' : '')}0deg)`;
+  // glyph.style.textShadow = `${(status === 'active' ? 'none' : '0 0 6px #FFF')}`;
 };
 
 // Includes a bullet character denoting the tab matching the user's current route:
@@ -133,17 +128,17 @@ const detectCurrentRoute = (route) => {
   const [HASH, HASH_PATTERN] = [document.location.hash, new RegExp(`^#.+`)],
         currRoute = (HASH_PATTERN.test(HASH) ? HASH.match(HASH_PATTERN)[0].substr(1) : null),
         routeName = `${currRoute.charAt(0).toUpperCase()}${currRoute.slice(1)}`;
-  return (routeName && routeName === `/${route.target}`.replace(/^(\/){2,}/, '$1')
-    ? '\u25CB \u00A0'
-    : '') + route.destination;
+  return route.destination + (routeName && routeName === `/${route.target}`.replace(/^(\/){2,}/, '$1')
+    ? '\u00A0 \u25CB'
+    : '');
 };
 
 // Controls sidebar navigation menu display and behavior:
 const executeNavAction = (evt, glyph, nav) => {
   (nav.classList.contains('active') && evt.target !== nav && evt.target.parentNode !== nav)
   || (nav.classList.contains('active') && evt.target === glyph)
-    ? deactivate(glyph, nav) : evt.target === glyph
-    ? activate(glyph, nav)
+    ? toggleSidebar(glyph, nav, 'inactive') : evt.target === glyph
+    ? toggleSidebar(glyph, nav)
     : null;
 };
 
@@ -157,7 +152,7 @@ const renderNavLinks = (links) => links.map((link, index) =>
   </Link>
 );
 
-export { activate, deactivate, detectCurrentRoute, executeNavAction, renderNavLinks };
+export { detectCurrentRoute, executeNavAction, renderNavLinks, toggleNavClasses, toggleSidebar };
 
 
 /* Miscellaneous functions
@@ -166,8 +161,7 @@ export { activate, deactivate, detectCurrentRoute, executeNavAction, renderNavLi
 // Future proofs site footer text by dynamically assessing the current year for copyright purposes:
 const appendCopyright = () => {
   let currentYear = new Date().getFullYear();
-  return `Copyright ${String.fromCharCode(169)} ${currentYear} \
-              Davie Poplar Capital, LLC. | All Rights Reserved`;
+  return `Copyright ${String.fromCharCode(169)} ${currentYear} Davie Poplar Capital, LLC.`;
 };
 
 // Dynamically assigns `className` contingent on the hash of the current route:
