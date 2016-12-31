@@ -8,7 +8,11 @@ import { appendCopyright } from '../../Mixins';
 
 const Footer = () => (
   <footer className="footer">
-    <p id="copyright_Par">{ appendCopyright() }</p>
+    <div>
+      <p className="computer">{ `${appendCopyright()} | All Rights Reserved` }</p>
+      <p className="mobile">{ appendCopyright() }</p>
+      <p className="mobile">All Rights Reserved</p>
+    </div>
     <div className="social-share">
       <a
         href="https://www.linkedin.com/in/isenrichr"
